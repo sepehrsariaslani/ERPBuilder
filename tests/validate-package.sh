@@ -6,4 +6,4 @@ for file in SKILL.md agents/openai.yaml references/hesabyar-ui-catalog.md script
   [[ -f "$root/erp-ui-builder/$file" ]]
 done
 rg -q 'find-ui-component.sh' "$root/erp-ui-builder/SKILL.md"
-rg -q 'Installation' "$root/README.md"
+rg -q '^## نصب$' "$root/README.md"

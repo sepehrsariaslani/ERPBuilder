@@ -1,53 +1,53 @@
-# ERP UI Builder
+# سازندهٔ رابط کاربری ERP
 
-A portable Codex skill for building consistent, right-to-left Hesabyar ERP interfaces. It packages the canonical UI guidance, a component catalog, and narrow lookup tools so an agent can find an existing component before reading large parts of the frontend.
+مهارت قابل‌انتقال Codex برای ساخت رابط‌های یکدست، راست‌به‌چپ و عملیاتی حسابیار. این بسته راهنمای مرجع رابط کاربری، کاتالوگ کامپوننت‌ها و ابزارهای جست‌وجوی محدود را فراهم می‌کند تا پیش از خواندن بخش‌های بزرگ فرانت‌اند، کامپوننت موجود پیدا شود.
 
-## Prerequisites
+## پیش‌نیازها
 
-The scripts require:
+اسکریپت‌ها به موارد زیر نیاز دارند:
 
 - `bash`
 - `jq`
 - `rg` (ripgrep)
 
-The lookup script also uses the standard `column` utility available on typical Linux systems.
+اسکریپت جست‌وجو از ابزار استاندارد `column` نیز استفاده می‌کند که معمولاً در Linux موجود است.
 
-## Installation
+## نصب
 
-Copy the complete `erp-ui-builder` directory into the Codex skills directory:
+پوشهٔ کامل `erp-ui-builder` را در پوشهٔ مهارت‌های Codex کپی کنید:
 
 ```bash
 cp -R erp-ui-builder "$CODEX_HOME/skills/"
 ```
 
-Restart or reload Codex if it does not discover newly installed skills automatically. Keep the whole directory intact: `SKILL.md`, `agents/`, `references/`, and `scripts/` are all part of the package.
+اگر Codex مهارت جدید را خودکار پیدا نکرد، آن را دوباره بارگذاری یا راه‌اندازی کنید. همهٔ محتویات پوشه را نگه دارید؛ `SKILL.md`، `agents/`، `references/` و `scripts/` بخش‌های بسته هستند.
 
-## Component lookup
+## جست‌وجوی کامپوننت
 
-From the package root, search the catalog before reading frontend files:
+از ریشهٔ بسته، پیش از خواندن فایل‌های فرانت‌اند در کاتالوگ جست‌وجو کنید:
 
 ```bash
 ./erp-ui-builder/scripts/find-ui-component.sh SmartDataTable
 ./erp-ui-builder/scripts/find-ui-component.sh PersianDateInput
 ```
 
-The output identifies the source path and the matching section in `erp-ui-builder/references/component-guide.md`. Read that guide entry, then inspect only the listed component if its API details are needed.
+خروجی مسیر مبدأ و بخش متناظر در `erp-ui-builder/references/component-guide.md` را نشان می‌دهد. ابتدا همان بخش راهنما را بخوانید و فقط اگر جزئیات API لازم بود، کامپوننت فهرست‌شده را بررسی کنید.
 
-When no component matches, use the compact domain scan instead of a project-wide search:
+اگر کامپوننت متناظری نبود، به‌جای جست‌وجوی کل پروژه از اسکن فشردهٔ دامنه استفاده کنید:
 
 ```bash
 ./erp-ui-builder/scripts/scan-ui-context.sh procurement /absolute/path/to/accounts/frontend/src
 ```
 
-## Updating the catalog
+## به‌روزرسانی کاتالوگ
 
-Set `ERP_UI_SOURCE_ROOT` to the target application's `frontend/src` directory. Validate the packaged catalog against the current source with:
+مقدار `ERP_UI_SOURCE_ROOT` را مسیر `frontend/src` برنامهٔ هدف قرار دهید. سپس کاتالوگ بسته را با مبدأ فعلی اعتبارسنجی کنید:
 
 ```bash
 ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src bash tests/validate-catalog.sh
 ```
 
-When components are added, removed, or moved, regenerate `erp-ui-builder/references/component-index.json` from the same source root, update the related entries in `component-guide.md` and `directory-map.md`, then run the validation again. The index generation command is:
+با افزودن، حذف یا جابه‌جایی کامپوننت‌ها، `erp-ui-builder/references/component-index.json` را از همان ریشهٔ مبدأ دوباره بسازید، مدخل‌های مرتبط در `component-guide.md` و `directory-map.md` را به‌روزرسانی کنید و اعتبارسنجی را تکرار کنید. فرمان ساخت نمایه:
 
 ```bash
 export ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src
@@ -66,7 +66,7 @@ rg --files "$ERP_UI_SOURCE_ROOT/components" -g '*.vue' \
     ' > erp-ui-builder/references/component-index.json
 ```
 
-Finally run the package checks with the same source root:
+در پایان، بررسی‌های بسته را با همان ریشهٔ مبدأ اجرا کنید:
 
 ```bash
 ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src \
