@@ -1,18 +1,18 @@
-# Hesabyar UI directory map
+# نقشهٔ پوشه‌های رابط کاربری حسابیار
 
-Use this map before searching by filename. Paths are relative to the accounts app root; a component's index category is the first directory beneath `frontend/src/components` (`root` means a legacy top-level component).
+پیش از جست‌وجوی نام فایل، از این نقشه استفاده کنید. مسیرها نسبت به ریشهٔ برنامهٔ accounts هستند. دستهٔ هر کامپوننت در فهرست، نخستین پوشه پس از `frontend/src/components` است؛ `root` یعنی کامپوننت قدیمیِ سطح بالا.
 
-| Area | Primary path | Use it for |
+| بخش | مسیر اصلی | کاربرد |
 | --- | --- | --- |
-| Pages | `frontend/src/pages/` | Route-level screens and page composition. |
-| Domain components | `frontend/src/components/<domain>/` | Cohesive finance, sales, procurement, manufacturing, HR, inventory, party, supplier, and access UI. |
-| Shared | `frontend/src/components/shared/` | Cross-domain controls, list views, filters, inputs, and reusable tables. |
-| Design | `frontend/src/components/design/` | Design-system primitives: headers, buttons, feedback, and overlays. |
-| Document | `frontend/src/components/document/` | Document shells, lifecycle surfaces, editable lines, tabs, breadcrumbs, and process headers. |
-| Table | `frontend/src/components/table/` | Focused table implementations. Prefer shared `SmartDataTable` for analytical results. |
-| Dashboard | `frontend/src/components/dashboard/` | Dashboard shell, widgets, metrics, and renderers. |
-| Services | `frontend/src/services/` | API clients and data access; do not place service calls in presentation components. |
-| Design system | `frontend/src/components/design/` | Tokens and canonical UI primitives; reuse before adding local equivalents. |
-| UX core | `frontend/src/components/ux-core/` | Progressive disclosure, workspace, inbox, timeline, and command interactions. |
+| صفحه‌ها | `frontend/src/pages/` | صفحه‌های مسیردار و ترکیب صفحه. |
+| کامپوننت‌های دامنه | `frontend/src/components/<domain>/` | رابط‌های مالی، فروش، خرید، تولید، منابع انسانی، انبار، طرف‌حساب، تأمین‌کننده و دسترسی. |
+| مشترک | `frontend/src/components/shared/` | کنترل‌ها، فهرست‌ها، فیلترها، ورودی‌ها و جدول‌های قابل‌استفاده میان دامنه‌ها. |
+| طراحی | `frontend/src/components/design/` | اجزای پایهٔ طراحی: سربرگ، دکمه، بازخورد و لایه‌های شناور. |
+| سند | `frontend/src/components/document/` | پوستهٔ سند، چرخهٔ حیات، سطرهای قابل‌ویرایش، زبانه‌ها، مسیرنما و سربرگ فرایند. |
+| جدول | `frontend/src/components/table/` | پیاده‌سازی‌های تخصصی جدول؛ برای نتیجهٔ تحلیلی `SmartDataTable` مشترک را ترجیح دهید. |
+| داشبورد | `frontend/src/components/dashboard/` | پوسته، ابزارک، شاخص و رندرکنندهٔ داشبورد. |
+| سرویس‌ها | `frontend/src/services/` | دریافت داده و کلاینت API؛ فراخوانی سرویس را در کامپوننت نمایشی نگذارید. |
+| سامانهٔ طراحی | `frontend/src/components/design/` | توکن‌ها و اجزای پایهٔ تأییدشده؛ پیش از ساخت نمونهٔ محلی از آن‌ها استفاده کنید. |
+| هستهٔ تجربهٔ کاربری | `frontend/src/components/ux-core/` | نمایش تدریجی، فضای‌کار، صندوق ورودی، خط زمان و فرمان‌ها. |
 
-Other indexed directories retain their source-folder category (for example `activity`, `bulk`, `form`, `list-view`, `notes`, and `tasks`). Nested folders keep the category of their first directory: `components/procurement/foundation/...` remains `procurement`.
+پوشه‌های دیگر نیز دستهٔ پوشهٔ مبدأ خود را دارند؛ مانند `activity`، `bulk`، `form`، `list-view`، `notes` و `tasks`. پوشه‌های تودرتو دستهٔ نخست خود را حفظ می‌کنند؛ برای نمونه `components/procurement/foundation/...` همچنان `procurement` است.

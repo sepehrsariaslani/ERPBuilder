@@ -1,178 +1,227 @@
-# Canonical Hesabyar component guide
+# راهنمای کامپوننت‌های پایهٔ حسابیار
 
-Use canonical components before adding page-local primitives. Paths are relative to the accounts app root. “Invocation” means import the component and supply its documented props/events; use the named slots listed by the component instead of duplicating its internal layout.
+پیش از ساخت جزء محلی، کامپوننت پایه را به‌کار ببرید. مسیرها نسبت به ریشهٔ برنامهٔ accounts هستند. در بخش «نحوهٔ استفاده»، props و events مستند کامپوننت را بدهید و از slotهای آن برای توسعهٔ چیدمان بهره بگیرید.
 
 ## GenericListView
 
-- **When:** operational record collections.
-- **Path:** `frontend/src/components/shared/GenericListView.vue`
-- **Invocation/slots:** configure columns, filters, quick filters, row-click navigation, and slot renderers for special cells.
-- **Do not substitute:** a second page-local table for the same records.
+- **کاربرد:** فهرست عملیاتی رکوردها.
+- **مسیر:** `frontend/src/components/shared/GenericListView.vue`
+- **نحوهٔ استفاده:** ستون، فیلتر، فیلتر سریع، انتخاب سطر و slot رندر سلول را پیکربندی کنید.
+- **جایگزین ممنوع:** جدول محلیِ دوم برای همان رکوردها.
 
 ## ProcurementListPage
 
-- **When:** procurement document lists needing shared bulk panels and quick filters.
-- **Path:** `frontend/src/components/procurement/foundation/ProcurementListPage.vue`
-- **Invocation/slots:** provide document-specific status, amount, and action renderers through its list slots.
-- **Do not substitute:** a hand-assembled procurement list that reimplements shared bulk behavior.
+- **کاربرد:** فهرست اسناد خرید با رفتار گروهی مشترک.
+- **مسیر:** `frontend/src/components/procurement/foundation/ProcurementListPage.vue`
+- **نحوهٔ استفاده:** وضعیت، مبلغ و عملیات سند را با slotهای فهرست بدهید.
+- **جایگزین ممنوع:** فهرست دستی خرید.
 
 ## PersianDateInput
 
-- **When:** Persian-facing date filters and document dates.
-- **Path:** `frontend/src/components/shared/PersianDateInput.vue`
-- **Invocation/slots:** bind the ERP ISO API model value; expose a Persian label and let the control render the Persian date.
-- **Do not substitute:** a plain text/date input with manually formatted Jalali strings.
+- **کاربرد:** تاریخ فارسی در فیلتر یا سند.
+- **مسیر:** `frontend/src/components/shared/PersianDateInput.vue`
+- **نحوهٔ استفاده:** مقدار مدل ISO موردنیاز API را bind و برچسب فارسی بدهید.
+- **جایگزین ممنوع:** ورودی معمولی با تبدیل دستی جلالی.
 
 ## SearchableDropdown
 
-- **When:** long product, account, party, BOM, warehouse, or similar option sets.
-- **Path:** `frontend/src/components/shared/SearchableDropdown.vue`
-- **Invocation/slots:** provide `search-fn`, placeholder, `label-field`, and `value-field`; use its option rendering hooks when needed.
-- **Do not substitute:** an unsearchable native select for a large data set.
+- **کاربرد:** گزینه‌های پرتعداد مانند محصول، حساب، طرف‌حساب، BOM و انبار.
+- **مسیر:** `frontend/src/components/shared/SearchableDropdown.vue`
+- **نحوهٔ استفاده:** `search-fn`، placeholder، `label-field` و `value-field` را بدهید؛ رندر گزینه را با slot تغییر دهید.
+- **جایگزین ممنوع:** select بدون جست‌وجو.
 
 ## SmartDataTable
 
-- **When:** ledger, reconciliation, analysis, and report-result tables.
-- **Path:** `frontend/src/components/shared/SmartDataTable.vue`
-- **Invocation/slots:** configure columns, frozen columns, widths, filters, totals, and row-click drill-down; mark quantity/rate/inventory columns `float` or `number` and only set `decimals` for a business rule.
-- **Do not substitute:** a hand-built `<table>` or integer rounding for stock quantities.
+- **کاربرد:** دفتر، مغایرت‌گیری، تحلیل و نتیجهٔ گزارش.
+- **مسیر:** `frontend/src/components/shared/SmartDataTable.vue`
+- **نحوهٔ استفاده:** ستون، عرض، ستون ثابت، فیلتر، جمع و drill-down سطر را تنظیم کنید؛ مقدار و نرخ را `float` یا `number` بگذارید.
+- **جایگزین ممنوع:** `<table>` دستی یا گردکردن موجودی.
 
 ## EditableTable
 
-- **When:** editable child rows outside document-specific flows.
-- **Path:** `frontend/src/components/shared/EditableTable.vue`
-- **Invocation/slots:** keep stable column widths and put search controls in the relevant cell slot.
-- **Do not substitute:** independently managed inline-row markup.
+- **کاربرد:** سطرهای فرزند قابل‌ویرایش خارج از سند.
+- **مسیر:** `frontend/src/components/shared/EditableTable.vue`
+- **نحوهٔ استفاده:** عرض ستون را ثابت نگه دارید و کنترل جست‌وجو را در slot همان سلول بگذارید.
+- **جایگزین ممنوع:** سطرهای inline با وضعیت مستقل.
 
 ## DocumentEditableTable
 
-- **When:** editable document line items.
-- **Path:** `frontend/src/components/document/DocumentEditableTable.vue`
-- **Invocation/slots:** supply line-item cell slots and preserve the table's stable widths and editing contract.
-- **Do not substitute:** a generic form stack for document lines.
+- **کاربرد:** اقلام قابل‌ویرایش سند.
+- **مسیر:** `frontend/src/components/document/DocumentEditableTable.vue`
+- **نحوهٔ استفاده:** slotهای سلول اقلام را بدهید و قرارداد ویرایش را حفظ کنید.
+- **جایگزین ممنوع:** فرم‌های عمومی به‌جای اقلام سند.
 
 ## PartyDetailShell
 
-- **When:** 360-degree customer, supplier, employee, or partner pages.
-- **Path:** `frontend/src/components/party/PartyDetailShell.vue`
-- **Invocation/slots:** compose Persian header/actions, KPI row, progressive tabs, overview, related activity, and file sidebar through shell slots.
-- **Do not substitute:** a separate page-local 360 layout.
+- **کاربرد:** صفحهٔ ۳۶۰ درجهٔ مشتری، تأمین‌کننده، کارمند یا همکار.
+- **مسیر:** `frontend/src/components/party/PartyDetailShell.vue`
+- **نحوهٔ استفاده:** سربرگ، عملیات، شاخص‌ها، زبانه‌ها، فعالیت و پرونده را با slotهای پوسته ترکیب کنید.
+- **جایگزین ممنوع:** چیدمان ۳۶۰ درجهٔ جدا.
 
 ## DashboardShell
 
-- **When:** operational dashboards.
-- **Path:** `frontend/src/components/dashboard/DashboardShell.vue`
-- **Invocation/slots:** put key measures, then question-answering charts/tables in its dashboard regions.
-- **Do not substitute:** a marketing hero or isolated KPI-card wall.
+- **کاربرد:** داشبورد عملیاتی.
+- **مسیر:** `frontend/src/components/dashboard/DashboardShell.vue`
+- **نحوهٔ استفاده:** شاخص‌های کلیدی و سپس نمودار/جدول عملیاتی را در ناحیه‌های پوسته بگذارید.
+- **جایگزین ممنوع:** hero تبلیغاتی یا دیوار کارت.
 
 ## AssetReports
 
-- **When:** asset report selection and execution.
-- **Path:** `frontend/src/pages/assets/AssetReports.vue`
-- **Invocation/slots:** follow its compact filter surface, single run action, post-run summary, and dense result-table workflow; keep report IDs internal.
-- **Do not substitute:** a generic dashboard that exposes English report-engine names.
+- **کاربرد:** انتخاب و اجرای گزارش دارایی.
+- **مسیر:** `frontend/src/pages/AssetReports.vue`
+- **نحوهٔ استفاده:** فیلتر فشرده، یک عمل اجرا، خلاصه و جدول متراکم را نگه دارید؛ شناسهٔ گزارش داخلی بماند.
+- **جایگزین ممنوع:** داشبورد عمومی با نام انگلیسی موتور گزارش.
 
 ## PageHeader
 
-- **When:** page context and primary actions.
-- **Path:** `frontend/src/components/design/PageHeader.vue`
-- **Invocation/slots:** supply Persian title, context, and the existing action region.
-- **Do not substitute:** an ad-hoc heading/action bar.
+- **کاربرد:** زمینهٔ صفحه و عملیات اصلی.
+- **مسیر:** `frontend/src/components/design/PageHeader.vue`
+- **نحوهٔ استفاده:** عنوان و زمینهٔ فارسی و ناحیهٔ عملیات موجود را تأمین کنید.
+- **جایگزین ممنوع:** نوار عنوان دست‌ساز.
 
-## Button and IconButton
+## Button
 
-- **When:** visible actions and compact, non-critical icon actions.
-- **Path:** `frontend/src/components/design/Button.vue`; `frontend/src/components/design/IconButton.vue`
-- **Invocation/slots:** use semantic variant/loading state; provide a Persian tooltip or accessible label for icon-only use.
-- **Do not substitute:** raw buttons or critical tiny icon-only controls.
+- **کاربرد:** عملیات دارای متن.
+- **مسیر:** `frontend/src/components/design/Button.vue`
+- **نحوهٔ استفاده:** variant معنایی، حالت بارگذاری و متن فارسی را بدهید.
+- **جایگزین ممنوع:** دکمهٔ خام با رنگ محلی.
+
+## IconButton
+
+- **کاربرد:** عملیات فشرده و غیرحیاتی با آیکن.
+- **مسیر:** `frontend/src/components/design/IconButton.vue`
+- **نحوهٔ استفاده:** tooltip یا برچسب دسترس‌پذیر فارسی بدهید.
+- **جایگزین ممنوع:** کنترل حیاتیِ بدون برچسب.
 
 ## MetricCard
 
-- **When:** a key operational measure.
-- **Path:** `frontend/src/components/design/MetricCard.vue`
-- **Invocation/slots:** provide one concise metric and contextual label; place it in the page KPI row.
-- **Do not substitute:** a decorative card grid for every value.
+- **کاربرد:** یک شاخص کلیدی عملیاتی.
+- **مسیر:** `frontend/src/components/design/MetricCard.vue`
+- **نحوهٔ استفاده:** یک مقدار و برچسب کوتاه در ردیف شاخص‌های صفحه بدهید.
+- **جایگزین ممنوع:** کارت تزئینی برای هر مقدار.
 
-## AppStatusBadge and StatusBadge
+## AppStatusBadge
 
-- **When:** concise lifecycle or operational status.
-- **Path:** `frontend/src/components/design/AppStatusBadge.vue`; `frontend/src/components/shared/StatusBadge.vue`
-- **Invocation/slots:** pass the established semantic status and Persian text; retain the surrounding formatter where one exists.
-- **Do not substitute:** color alone or locally invented status styling.
+- **کاربرد:** وضعیت فشردهٔ چرخهٔ حیات.
+- **مسیر:** `frontend/src/components/design/AppStatusBadge.vue`
+- **نحوهٔ استفاده:** وضعیت معنایی و متن فارسی تثبیت‌شده را بدهید.
+- **جایگزین ممنوع:** اتکا به رنگ بدون متن.
 
-## StatePanel and Skeleton
+## StatusBadge
 
-- **When:** empty/error/actionable states and loading placeholders.
-- **Path:** `frontend/src/components/design/StatePanel.vue`; `frontend/src/components/design/Skeleton.vue`
-- **Invocation/slots:** supply an honest Persian state and next action; use skeletons only while data is loading.
-- **Do not substitute:** a success toast as the only evidence of a long-running result.
+- **کاربرد:** نشان وضعیت مشترک در جدول یا فهرست.
+- **مسیر:** `frontend/src/components/shared/StatusBadge.vue`
+- **نحوهٔ استفاده:** از وضعیت معنایی و قالب‌بند موجود استفاده کنید.
+- **جایگزین ممنوع:** سبک وضعیت ابداعی.
 
-## Tooltip and Toast
+## StatePanel
 
-- **When:** icon explanation and transient feedback.
-- **Path:** `frontend/src/components/design/Tooltip.vue`; `frontend/src/components/design/Toast.vue`
-- **Invocation/slots:** wrap unclear icons with a Persian tooltip; use toast for confirmation alongside persistent workflow state.
-- **Do not substitute:** unlabeled icons or toast-only financial/inventory completion feedback.
+- **کاربرد:** وضعیت خالی، خطا یا نیازمند اقدام.
+- **مسیر:** `frontend/src/components/design/StatePanel.vue`
+- **نحوهٔ استفاده:** وضعیت فارسی و اقدام بعدی را در slotها بدهید.
+- **جایگزین ممنوع:** toast به‌عنوان تنها نشانهٔ پایان کار.
 
-## ResizableSidePanel and ReportDocumentSidePanel
+## Skeleton
 
-- **When:** row details, previews, and related-document inspection.
-- **Path:** `frontend/src/components/ResizableSidePanel.vue`; `frontend/src/components/ReportDocumentSidePanel.vue`
-- **Invocation/slots:** open from predictable row-click targets and render detail content in the panel slot.
-- **Do not substitute:** an unrelated modal or a second detail page without a clear row target.
+- **کاربرد:** جای‌نگهدار زمان بارگذاری.
+- **مسیر:** `frontend/src/components/design/Skeleton.vue`
+- **نحوهٔ استفاده:** فقط تا رسیدن داده و هم‌اندازهٔ محتوای مقصد نشان دهید.
+- **جایگزین ممنوع:** جای‌نگهدار دائمی به‌جای خطا.
+
+## Tooltip
+
+- **کاربرد:** توضیح آیکن یا کنترل مبهم.
+- **مسیر:** `frontend/src/components/design/Tooltip.vue`
+- **نحوهٔ استفاده:** آیکن را با توضیح فارسی کوتاه بپوشانید.
+- **جایگزین ممنوع:** آیکن بی‌برچسب.
+
+## Toast
+
+- **کاربرد:** بازخورد گذرای عملیات.
+- **مسیر:** `frontend/src/components/design/Toast.vue`
+- **نحوهٔ استفاده:** تأیید کوتاه فارسی بدهید، اما نتیجهٔ مالی/انباری را پایدار نیز نشان دهید.
+- **جایگزین ممنوع:** toast به‌عنوان تنها وضعیت نتیجه.
+
+## ResizableSidePanel
+
+- **کاربرد:** جزئیات و پیش‌نمایش انتخاب سطر.
+- **مسیر:** `frontend/src/components/ResizableSidePanel.vue`
+- **نحوهٔ استفاده:** از انتخاب سطر بازش کنید و محتوا را در slot پنل بگذارید.
+- **جایگزین ممنوع:** modal نامرتبط.
+
+## ReportDocumentSidePanel
+
+- **کاربرد:** مشاهدهٔ سند از نتیجهٔ گزارش.
+- **مسیر:** `frontend/src/components/ReportDocumentSidePanel.vue`
+- **نحوهٔ استفاده:** هدف سند و محتوای پیش‌نمایش را در پنل بدهید.
+- **جایگزین ممنوع:** پنجرهٔ اختصاصی گزارش با وضعیت جدا.
 
 ## DocumentTabs
 
-- **When:** progressive sections of a document or 360 view.
-- **Path:** `frontend/src/components/document/DocumentTabs.vue`
-- **Invocation/slots:** register focused tabs and keep advanced ones behind progressive disclosure when needed.
-- **Do not substitute:** an overloaded first view containing every section.
+- **کاربرد:** بخش‌های تدریجی سند یا صفحهٔ ۳۶۰.
+- **مسیر:** `frontend/src/components/document/DocumentTabs.vue`
+- **نحوهٔ استفاده:** زبانه‌های متمرکز را ثبت و بخش پیشرفته را پنهان کنید.
+- **جایگزین ممنوع:** نمای اول شلوغ.
 
 ## DocumentActionDrawer
 
-- **When:** document secondary operations.
-- **Path:** `frontend/src/components/DocumentActionDrawer.vue`
-- **Invocation/slots:** keep primary lifecycle actions visible in the header and pass secondary actions to the drawer.
-- **Do not substitute:** an unstructured action menu or direct deletion of a submitted document.
+- **کاربرد:** عملیات ثانویهٔ سند.
+- **مسیر:** `frontend/src/components/DocumentActionDrawer.vue`
+- **نحوهٔ استفاده:** عملیات اصلی را در سربرگ نگه دارید و ثانویه را به drawer بدهید.
+- **جایگزین ممنوع:** منوی بی‌ساختار یا حذف مستقیم سند ثبت‌شده.
 
 ## DocumentActivityButton
 
-- **When:** opening a document's activity surface.
-- **Path:** `frontend/src/components/activity/DocumentActivityButton.vue`
-- **Invocation/slots:** use through the document/party shell action area and preserve its activity target.
-- **Do not substitute:** a page-local activity trigger with separate state.
+- **کاربرد:** گشودن فعالیت سند.
+- **مسیر:** `frontend/src/components/activity/DocumentActivityButton.vue`
+- **نحوهٔ استفاده:** در ناحیهٔ عملیات پوسته بگذارید و هدف فعالیت را حفظ کنید.
+- **جایگزین ممنوع:** دکمهٔ فعالیت با وضعیت جدا.
 
-## DocumentSidebarSection and FileChecklistSection
+## DocumentSidebarSection
 
-- **When:** supporting detail and file/completeness checks on document or party pages.
-- **Path:** `frontend/src/components/document/DocumentSidebarSection.vue`; `frontend/src/components/party/FileChecklistSection.vue`
-- **Invocation/slots:** compose them in the shell sidebar and keep supporting detail out of the primary workflow.
-- **Do not substitute:** nested floating cards in the main form.
+- **کاربرد:** جزئیات پشتیبان در ستون کناری سند.
+- **مسیر:** `frontend/src/components/document/DocumentSidebarSection.vue`
+- **نحوهٔ استفاده:** محتوا را با slot در ستون کناری پوسته بگذارید.
+- **جایگزین ممنوع:** کارت تودرتو در فرم اصلی.
+
+## FileChecklistSection
+
+- **کاربرد:** کنترل پرونده و کامل‌بودن طرف‌حساب.
+- **مسیر:** `frontend/src/components/party/FileChecklistSection.vue`
+- **نحوهٔ استفاده:** در slot ستون کناری `PartyDetailShell` ترکیب کنید.
+- **جایگزین ممنوع:** فهرست فایل محلی در فرم.
 
 ## KpiCard
 
-- **When:** document/party KPI rows inside the 360 shell.
-- **Path:** `frontend/src/components/document/KpiCard.vue`
-- **Invocation/slots:** pass one operational KPI in the shell's KPI region.
-- **Do not substitute:** a separate KPI layout that competes with `PartyDetailShell`.
+- **کاربرد:** ردیف شاخص سند یا طرف‌حساب.
+- **مسیر:** `frontend/src/components/document/KpiCard.vue`
+- **نحوهٔ استفاده:** یک شاخص عملیاتی را در ناحیهٔ KPI پوسته بدهید.
+- **جایگزین ممنوع:** چیدمان شاخص جدا.
 
 ## UxProgressiveDisclosure
 
-- **When:** advanced content would overload the initial view.
-- **Path:** `frontend/src/components/ux-core/UxProgressiveDisclosure.vue`
-- **Invocation/slots:** place optional controls or tabs in its disclosed content slot and retain a clear Persian trigger.
-- **Do not substitute:** an always-expanded filter wall.
+- **کاربرد:** کنترل یا زبانهٔ پیشرفته.
+- **مسیر:** `frontend/src/components/ux-core/UxProgressiveDisclosure.vue`
+- **نحوهٔ استفاده:** محتوای اختیاری را در slot افشا و محرک فارسی روشن بگذارید.
+- **جایگزین ممنوع:** دیوار فیلتر همیشه‌باز.
 
 ## PageBreadcrumbs
 
-- **When:** every document detail page.
-- **Path:** `frontend/src/components/document/PageBreadcrumbs.vue`
-- **Invocation/slots:** place above the document header with the native document hierarchy.
-- **Do not substitute:** a custom text trail or omitted hierarchy.
+- **کاربرد:** صفحه‌های جزئیات سند.
+- **مسیر:** `frontend/src/components/document/PageBreadcrumbs.vue`
+- **نحوهٔ استفاده:** بالای سربرگ سند با سلسله‌مراتب واقعی قرار دهید.
+- **جایگزین ممنوع:** مسیر متنی دست‌ساز یا حذف مسیرنما.
 
-## ProcessDocumentHeader and DocumentPageShell
+## ProcessDocumentHeader
 
-- **When:** multi-stage payroll, fulfillment, production, BOM-correction, and work-order documents.
-- **Path:** `frontend/src/components/document/ProcessDocumentHeader.vue`; `frontend/src/components/document/DocumentPageShell.vue`
-- **Invocation/slots:** use full desktop width and provide `moduleTone`, breadcrumbs, steps, current step, primary/secondary actions, `printDoctype`, and `printName`; keep domain transitions/calculations in the page.
-- **Do not substitute:** a narrow local header or a duplicate print workflow.
+- **کاربرد:** اسناد چندمرحله‌ای حقوق، انجام روزانه، تولید، اصلاح BOM و سفارش کار.
+- **مسیر:** `frontend/src/components/document/ProcessDocumentHeader.vue`
+- **نحوهٔ استفاده:** در عرض کامل، `moduleTone`، breadcrumbs، steps، currentStep، primaryActions، actions، `printDoctype` و `printName` را بدهید.
+- **جایگزین ممنوع:** سربرگ باریک محلی یا فرایند چاپ تکراری.
+
+## DocumentPageShell
+
+- **کاربرد:** پوستهٔ معادل سند چندمرحله‌ای.
+- **مسیر:** `frontend/src/components/document/DocumentPageShell.vue`
+- **نحوهٔ استفاده:** عملیات و مراحل را در slotها/props پوسته بدهید و انتقال و محاسبه را در صفحه نگه دارید.
+- **جایگزین ممنوع:** پوستهٔ محلی با قرارداد چاپ و چرخهٔ حیات جدا.
