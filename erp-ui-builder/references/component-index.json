@@ -1,9 +1,1829 @@
 {
   "components": [
     {
+      "name": "AccountDistribution",
+      "path": "frontend/src/components/AccountDistribution.vue",
+      "category": "root"
+    },
+    {
+      "name": "AttendanceOverview",
+      "path": "frontend/src/components/AttendanceOverview.vue",
+      "category": "root"
+    },
+    {
+      "name": "AverageSales",
+      "path": "frontend/src/components/AverageSales.vue",
+      "category": "root"
+    },
+    {
+      "name": "BooleanBadge",
+      "path": "frontend/src/components/BooleanBadge.vue",
+      "category": "root"
+    },
+    {
+      "name": "CashFlowChart",
+      "path": "frontend/src/components/CashFlowChart.vue",
+      "category": "root"
+    },
+    {
+      "name": "CashierReport",
+      "path": "frontend/src/components/CashierReport.vue",
+      "category": "root"
+    },
+    {
+      "name": "CheckField",
+      "path": "frontend/src/components/CheckField.vue",
+      "category": "root"
+    },
+    {
+      "name": "ConditionBuilder",
+      "path": "frontend/src/components/ConditionBuilder.vue",
+      "category": "root"
+    },
+    {
+      "name": "CustomerSearchSelect",
+      "path": "frontend/src/components/CustomerSearchSelect.vue",
+      "category": "root"
+    },
+    {
+      "name": "DelayedProductionOrders",
+      "path": "frontend/src/components/DelayedProductionOrders.vue",
+      "category": "root"
+    },
+    {
+      "name": "DocumentActionDrawer",
+      "path": "frontend/src/components/DocumentActionDrawer.vue",
+      "category": "root"
+    },
+    {
+      "name": "DynamicListManager",
+      "path": "frontend/src/components/DynamicListManager.vue",
+      "category": "root"
+    },
+    {
+      "name": "FileUpload",
+      "path": "frontend/src/components/FileUpload.vue",
+      "category": "root"
+    },
+    {
+      "name": "FilterCalendar",
+      "path": "frontend/src/components/FilterCalendar.vue",
+      "category": "root"
+    },
+    {
+      "name": "FinanceHeader",
+      "path": "frontend/src/components/FinanceHeader.vue",
+      "category": "root"
+    },
+    {
+      "name": "FinanceKPI",
+      "path": "frontend/src/components/FinanceKPI.vue",
+      "category": "root"
+    },
+    {
+      "name": "FormField",
+      "path": "frontend/src/components/FormField.vue",
+      "category": "root"
+    },
+    {
+      "name": "FormulaEditor",
+      "path": "frontend/src/components/FormulaEditor.vue",
+      "category": "root"
+    },
+    {
+      "name": "GlobalSearch",
+      "path": "frontend/src/components/GlobalSearch.vue",
+      "category": "root"
+    },
+    {
+      "name": "HRHeader",
+      "path": "frontend/src/components/HRHeader.vue",
+      "category": "root"
+    },
+    {
+      "name": "HRKPI",
+      "path": "frontend/src/components/HRKPI.vue",
+      "category": "root"
+    },
+    {
+      "name": "HRQuickActions",
+      "path": "frontend/src/components/HRQuickActions.vue",
+      "category": "root"
+    },
+    {
+      "name": "HiringPipeline",
+      "path": "frontend/src/components/HiringPipeline.vue",
+      "category": "root"
+    },
+    {
+      "name": "InventoryHeader",
+      "path": "frontend/src/components/InventoryHeader.vue",
+      "category": "root"
+    },
+    {
+      "name": "InventoryKPI",
+      "path": "frontend/src/components/InventoryKPI.vue",
+      "category": "root"
+    },
+    {
+      "name": "InventoryQuickActions",
+      "path": "frontend/src/components/InventoryQuickActions.vue",
+      "category": "root"
+    },
+    {
+      "name": "InvoiceDetailsModal",
+      "path": "frontend/src/components/InvoiceDetailsModal.vue",
+      "category": "root"
+    },
+    {
+      "name": "InvoiceStatusGroup",
+      "path": "frontend/src/components/InvoiceStatusGroup.vue",
+      "category": "root"
+    },
+    {
+      "name": "InvoiceTable",
+      "path": "frontend/src/components/InvoiceTable.vue",
+      "category": "root"
+    },
+    {
+      "name": "LeaveOverview",
+      "path": "frontend/src/components/LeaveOverview.vue",
+      "category": "root"
+    },
+    {
+      "name": "LedgerLineDetailPanel",
+      "path": "frontend/src/components/LedgerLineDetailPanel.vue",
+      "category": "root"
+    },
+    {
+      "name": "LogActionModal",
+      "path": "frontend/src/components/LogActionModal.vue",
+      "category": "root"
+    },
+    {
+      "name": "LowStockItems",
+      "path": "frontend/src/components/LowStockItems.vue",
+      "category": "root"
+    },
+    {
+      "name": "MaterialShortageList",
+      "path": "frontend/src/components/MaterialShortageList.vue",
+      "category": "root"
+    },
+    {
+      "name": "ModuleRangeDatePicker",
+      "path": "frontend/src/components/ModuleRangeDatePicker.vue",
+      "category": "root"
+    },
+    {
+      "name": "MultiCustomerSelect",
+      "path": "frontend/src/components/MultiCustomerSelect.vue",
+      "category": "root"
+    },
+    {
+      "name": "NumericInput",
+      "path": "frontend/src/components/NumericInput.vue",
+      "category": "root"
+    },
+    {
+      "name": "OrganizationChartCanvas",
+      "path": "frontend/src/components/OrganizationChartCanvas.vue",
+      "category": "root"
+    },
+    {
+      "name": "OrganizationChartNode",
+      "path": "frontend/src/components/OrganizationChartNode.vue",
+      "category": "root"
+    },
+    {
+      "name": "PayrollCheckbox",
+      "path": "frontend/src/components/PayrollCheckbox.vue",
+      "category": "root"
+    },
+    {
+      "name": "PayrollOverview",
+      "path": "frontend/src/components/PayrollOverview.vue",
+      "category": "root"
+    },
+    {
+      "name": "PendingPurchaseOrders",
+      "path": "frontend/src/components/PendingPurchaseOrders.vue",
+      "category": "root"
+    },
+    {
+      "name": "PermissionMatrix",
+      "path": "frontend/src/components/PermissionMatrix.vue",
+      "category": "root"
+    },
+    {
+      "name": "PersianTimePicker",
+      "path": "frontend/src/components/PersianTimePicker.vue",
+      "category": "root"
+    },
+    {
+      "name": "PinSettingsModal",
+      "path": "frontend/src/components/PinSettingsModal.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProcurementExceptionTabs",
+      "path": "frontend/src/components/ProcurementExceptionTabs.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProcurementHeader",
+      "path": "frontend/src/components/ProcurementHeader.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProcurementKPI",
+      "path": "frontend/src/components/ProcurementKPI.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProcurementQuickActions",
+      "path": "frontend/src/components/ProcurementQuickActions.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProductionEfficiency",
+      "path": "frontend/src/components/ProductionEfficiency.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProductionHeader",
+      "path": "frontend/src/components/ProductionHeader.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProductionKPI",
+      "path": "frontend/src/components/ProductionKPI.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProductionPlanOverview",
+      "path": "frontend/src/components/ProductionPlanOverview.vue",
+      "category": "root"
+    },
+    {
+      "name": "ProductionQuickActions",
+      "path": "frontend/src/components/ProductionQuickActions.vue",
+      "category": "root"
+    },
+    {
+      "name": "PurchaseTrend",
+      "path": "frontend/src/components/PurchaseTrend.vue",
+      "category": "root"
+    },
+    {
+      "name": "QuickCreateSidePanel",
+      "path": "frontend/src/components/QuickCreateSidePanel.vue",
+      "category": "root"
+    },
+    {
+      "name": "QuickEntryModal",
+      "path": "frontend/src/components/QuickEntryModal.vue",
+      "category": "root"
+    },
+    {
+      "name": "QuickFinanceActions",
+      "path": "frontend/src/components/QuickFinanceActions.vue",
+      "category": "root"
+    },
+    {
+      "name": "ReceivablePayableOverview",
+      "path": "frontend/src/components/ReceivablePayableOverview.vue",
+      "category": "root"
+    },
+    {
+      "name": "RecentProductionEntries",
+      "path": "frontend/src/components/RecentProductionEntries.vue",
+      "category": "root"
+    },
+    {
+      "name": "RecentPurchases",
+      "path": "frontend/src/components/RecentPurchases.vue",
+      "category": "root"
+    },
+    {
+      "name": "RecentSales",
+      "path": "frontend/src/components/RecentSales.vue",
+      "category": "root"
+    },
+    {
+      "name": "RecentTransactions",
+      "path": "frontend/src/components/RecentTransactions.vue",
+      "category": "root"
+    },
+    {
+      "name": "ReportDocumentSidePanel",
+      "path": "frontend/src/components/ReportDocumentSidePanel.vue",
+      "category": "root"
+    },
+    {
+      "name": "ResizableSidePanel",
+      "path": "frontend/src/components/ResizableSidePanel.vue",
+      "category": "root"
+    },
+    {
+      "name": "RowEditSidePanel",
+      "path": "frontend/src/components/RowEditSidePanel.vue",
+      "category": "root"
+    },
+    {
+      "name": "SalesFunnel",
+      "path": "frontend/src/components/SalesFunnel.vue",
+      "category": "root"
+    },
+    {
+      "name": "SalesHeader",
+      "path": "frontend/src/components/SalesHeader.vue",
+      "category": "root"
+    },
+    {
+      "name": "SalesKPI",
+      "path": "frontend/src/components/SalesKPI.vue",
+      "category": "root"
+    },
+    {
+      "name": "SalesPipeline",
+      "path": "frontend/src/components/SalesPipeline.vue",
+      "category": "root"
+    },
+    {
+      "name": "SalesQuickActions",
+      "path": "frontend/src/components/SalesQuickActions.vue",
+      "category": "root"
+    },
+    {
+      "name": "ScreenLock",
+      "path": "frontend/src/components/ScreenLock.vue",
+      "category": "root"
+    },
+    {
+      "name": "StockDistribution",
+      "path": "frontend/src/components/StockDistribution.vue",
+      "category": "root"
+    },
+    {
+      "name": "StockMovements",
+      "path": "frontend/src/components/StockMovements.vue",
+      "category": "root"
+    },
+    {
+      "name": "StockReconciliationAnalysisDrawer",
+      "path": "frontend/src/components/StockReconciliationAnalysisDrawer.vue",
+      "category": "root"
+    },
+    {
+      "name": "SummaryCard",
+      "path": "frontend/src/components/SummaryCard.vue",
+      "category": "root"
+    },
+    {
+      "name": "SupplierOverview",
+      "path": "frontend/src/components/SupplierOverview.vue",
+      "category": "root"
+    },
+    {
+      "name": "TopCustomers",
+      "path": "frontend/src/components/TopCustomers.vue",
+      "category": "root"
+    },
+    {
+      "name": "TopEmployees",
+      "path": "frontend/src/components/TopEmployees.vue",
+      "category": "root"
+    },
+    {
+      "name": "TopItems",
+      "path": "frontend/src/components/TopItems.vue",
+      "category": "root"
+    },
+    {
+      "name": "TreeNode",
+      "path": "frontend/src/components/TreeNode.vue",
+      "category": "root"
+    },
+    {
+      "name": "UserFormModal",
+      "path": "frontend/src/components/UserFormModal.vue",
+      "category": "root"
+    },
+    {
+      "name": "UserListTable",
+      "path": "frontend/src/components/UserListTable.vue",
+      "category": "root"
+    },
+    {
+      "name": "WorkOrderStatus",
+      "path": "frontend/src/components/WorkOrderStatus.vue",
+      "category": "root"
+    },
+    {
+      "name": "EffectiveAccessInspector",
+      "path": "frontend/src/components/access/EffectiveAccessInspector.vue",
+      "category": "access"
+    },
+    {
+      "name": "PageReportPermissionPanel",
+      "path": "frontend/src/components/access/PageReportPermissionPanel.vue",
+      "category": "access"
+    },
+    {
+      "name": "PermissionTypeManager",
+      "path": "frontend/src/components/access/PermissionTypeManager.vue",
+      "category": "access"
+    },
+    {
+      "name": "RecordSharingPanel",
+      "path": "frontend/src/components/access/RecordSharingPanel.vue",
+      "category": "access"
+    },
+    {
+      "name": "RoleManager",
+      "path": "frontend/src/components/access/RoleManager.vue",
+      "category": "access"
+    },
+    {
+      "name": "RolePermissionPanel",
+      "path": "frontend/src/components/access/RolePermissionPanel.vue",
+      "category": "access"
+    },
+    {
+      "name": "RoleProfileManager",
+      "path": "frontend/src/components/access/RoleProfileManager.vue",
+      "category": "access"
+    },
+    {
+      "name": "UserPermissionPanel",
+      "path": "frontend/src/components/access/UserPermissionPanel.vue",
+      "category": "access"
+    },
+    {
+      "name": "UsersPanel",
+      "path": "frontend/src/components/access/UsersPanel.vue",
+      "category": "access"
+    },
+    {
+      "name": "DocumentActivityButton",
+      "path": "frontend/src/components/activity/DocumentActivityButton.vue",
+      "category": "activity"
+    },
+    {
+      "name": "DocumentActivityPanel",
+      "path": "frontend/src/components/activity/DocumentActivityPanel.vue",
+      "category": "activity"
+    },
+    {
+      "name": "DocumentConnectionsSection",
+      "path": "frontend/src/components/activity/DocumentConnectionsSection.vue",
+      "category": "activity"
+    },
+    {
+      "name": "NotificationCenter",
+      "path": "frontend/src/components/activity/NotificationCenter.vue",
+      "category": "activity"
+    },
+    {
+      "name": "RecentActivitySection",
+      "path": "frontend/src/components/activity/RecentActivitySection.vue",
+      "category": "activity"
+    },
+    {
+      "name": "BulkAssignmentPanel",
+      "path": "frontend/src/components/bulk/BulkAssignmentPanel.vue",
+      "category": "bulk"
+    },
+    {
+      "name": "BulkOperationsPanel",
+      "path": "frontend/src/components/bulk/BulkOperationsPanel.vue",
+      "category": "bulk"
+    },
+    {
+      "name": "BulkWorkflowPanel",
+      "path": "frontend/src/components/bulk/BulkWorkflowPanel.vue",
+      "category": "bulk"
+    },
+    {
+      "name": "AmountCalculator",
+      "path": "frontend/src/components/cashier-reconciliation/AmountCalculator.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "CashierFilters",
+      "path": "frontend/src/components/cashier-reconciliation/CashierFilters.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "CashierReport",
+      "path": "frontend/src/components/cashier-reconciliation/CashierReport.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "CustomerInvoiceAccordion",
+      "path": "frontend/src/components/cashier-reconciliation/CustomerInvoiceAccordion.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "InvoiceDetailsModal",
+      "path": "frontend/src/components/cashier-reconciliation/InvoiceDetailsModal.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "InvoiceTable",
+      "path": "frontend/src/components/cashier-reconciliation/InvoiceTable.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "ItemInvoicesSidePanel",
+      "path": "frontend/src/components/cashier-reconciliation/ItemInvoicesSidePanel.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "MultiCashierSelect",
+      "path": "frontend/src/components/cashier-reconciliation/MultiCashierSelect.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "NewSalesInvoiceModal",
+      "path": "frontend/src/components/cashier-reconciliation/NewSalesInvoiceModal.vue",
+      "category": "cashier-reconciliation"
+    },
+    {
+      "name": "ChatNavButton",
+      "path": "frontend/src/components/chat/ChatNavButton.vue",
+      "category": "chat"
+    },
+    {
+      "name": "DailyFulfillmentOperationBar",
+      "path": "frontend/src/components/dailyFulfillment/DailyFulfillmentOperationBar.vue",
+      "category": "dailyFulfillment"
+    },
+    {
+      "name": "DashboardChartWidget",
+      "path": "frontend/src/components/dashboard/DashboardChartWidget.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardCustomWidget",
+      "path": "frontend/src/components/dashboard/DashboardCustomWidget.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardDataTable",
+      "path": "frontend/src/components/dashboard/DashboardDataTable.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardKpiGroup",
+      "path": "frontend/src/components/dashboard/DashboardKpiGroup.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardMetricBar",
+      "path": "frontend/src/components/dashboard/DashboardMetricBar.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardMetricDistribution",
+      "path": "frontend/src/components/dashboard/DashboardMetricDistribution.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardModuleHeader",
+      "path": "frontend/src/components/dashboard/DashboardModuleHeader.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardNavigationCards",
+      "path": "frontend/src/components/dashboard/DashboardNavigationCards.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardQuickActions",
+      "path": "frontend/src/components/dashboard/DashboardQuickActions.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardRecentMovements",
+      "path": "frontend/src/components/dashboard/DashboardRecentMovements.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardRenderer",
+      "path": "frontend/src/components/dashboard/DashboardRenderer.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardShell",
+      "path": "frontend/src/components/dashboard/DashboardShell.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardSingleKpi",
+      "path": "frontend/src/components/dashboard/DashboardSingleKpi.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "DashboardWidgetError",
+      "path": "frontend/src/components/dashboard/DashboardWidgetError.vue",
+      "category": "dashboard"
+    },
+    {
+      "name": "AppStatusBadge",
+      "path": "frontend/src/components/design/AppStatusBadge.vue",
+      "category": "design"
+    },
+    {
+      "name": "Button",
+      "path": "frontend/src/components/design/Button.vue",
+      "category": "design"
+    },
+    {
+      "name": "Checkbox",
+      "path": "frontend/src/components/design/Checkbox.vue",
+      "category": "design"
+    },
+    {
+      "name": "Dropdown",
+      "path": "frontend/src/components/design/Dropdown.vue",
+      "category": "design"
+    },
+    {
+      "name": "IconButton",
+      "path": "frontend/src/components/design/IconButton.vue",
+      "category": "design"
+    },
+    {
+      "name": "InfoCell",
+      "path": "frontend/src/components/design/InfoCell.vue",
+      "category": "design"
+    },
+    {
+      "name": "MetricCard",
+      "path": "frontend/src/components/design/MetricCard.vue",
+      "category": "design"
+    },
+    {
+      "name": "PageHeader",
+      "path": "frontend/src/components/design/PageHeader.vue",
+      "category": "design"
+    },
+    {
+      "name": "Popover",
+      "path": "frontend/src/components/design/Popover.vue",
+      "category": "design"
+    },
+    {
+      "name": "Radio",
+      "path": "frontend/src/components/design/Radio.vue",
+      "category": "design"
+    },
+    {
+      "name": "Skeleton",
+      "path": "frontend/src/components/design/Skeleton.vue",
+      "category": "design"
+    },
+    {
+      "name": "StatePanel",
+      "path": "frontend/src/components/design/StatePanel.vue",
+      "category": "design"
+    },
+    {
+      "name": "Switch",
+      "path": "frontend/src/components/design/Switch.vue",
+      "category": "design"
+    },
+    {
+      "name": "TableCellRenderer",
+      "path": "frontend/src/components/design/TableCellRenderer.vue",
+      "category": "design"
+    },
+    {
+      "name": "Toast",
+      "path": "frontend/src/components/design/Toast.vue",
+      "category": "design"
+    },
+    {
+      "name": "ToastViewport",
+      "path": "frontend/src/components/design/ToastViewport.vue",
+      "category": "design"
+    },
+    {
+      "name": "Tooltip",
+      "path": "frontend/src/components/design/Tooltip.vue",
+      "category": "design"
+    },
+    {
+      "name": "AttachmentGallery",
+      "path": "frontend/src/components/document/AttachmentGallery.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentEditableTable",
+      "path": "frontend/src/components/document/DocumentEditableTable.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentExtensionSlot",
+      "path": "frontend/src/components/document/DocumentExtensionSlot.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentLockBanner",
+      "path": "frontend/src/components/document/DocumentLockBanner.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentPageShell",
+      "path": "frontend/src/components/document/DocumentPageShell.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentPermissionsGate",
+      "path": "frontend/src/components/document/DocumentPermissionsGate.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentSidebarSection",
+      "path": "frontend/src/components/document/DocumentSidebarSection.vue",
+      "category": "document"
+    },
+    {
+      "name": "DocumentTabs",
+      "path": "frontend/src/components/document/DocumentTabs.vue",
+      "category": "document"
+    },
+    {
+      "name": "FilePreviewModal",
+      "path": "frontend/src/components/document/FilePreviewModal.vue",
+      "category": "document"
+    },
+    {
+      "name": "KpiCard",
+      "path": "frontend/src/components/document/KpiCard.vue",
+      "category": "document"
+    },
+    {
+      "name": "MetadataForm",
+      "path": "frontend/src/components/document/MetadataForm.vue",
+      "category": "document"
+    },
+    {
+      "name": "PageBreadcrumbs",
+      "path": "frontend/src/components/document/PageBreadcrumbs.vue",
+      "category": "document"
+    },
+    {
+      "name": "ProcessDocumentHeader",
+      "path": "frontend/src/components/document/ProcessDocumentHeader.vue",
+      "category": "document"
+    },
+    {
+      "name": "BankStatementAmbiguousModal",
+      "path": "frontend/src/components/finance/BankStatementAmbiguousModal.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BankStatementDailyBalancePanel",
+      "path": "frontend/src/components/finance/BankStatementDailyBalancePanel.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BankStatementDocumentDetail",
+      "path": "frontend/src/components/finance/BankStatementDocumentDetail.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BankStatementEditRemarksModal",
+      "path": "frontend/src/components/finance/BankStatementEditRemarksModal.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BankStatementImportModal",
+      "path": "frontend/src/components/finance/BankStatementImportModal.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BankStatementPendingCorrectionsPanel",
+      "path": "frontend/src/components/finance/BankStatementPendingCorrectionsPanel.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BankStatementPurchaseRollbackModal",
+      "path": "frontend/src/components/finance/BankStatementPurchaseRollbackModal.vue",
+      "category": "finance"
+    },
+    {
+      "name": "FinanceHeader",
+      "path": "frontend/src/components/finance/FinanceHeader.vue",
+      "category": "finance"
+    },
+    {
+      "name": "FinanceKPI",
+      "path": "frontend/src/components/finance/FinanceKPI.vue",
+      "category": "finance"
+    },
+    {
+      "name": "PartyAnalytics",
+      "path": "frontend/src/components/finance/PartyAnalytics.vue",
+      "category": "finance"
+    },
+    {
+      "name": "PaymentPlanOpenBankingSetup",
+      "path": "frontend/src/components/finance/PaymentPlanOpenBankingSetup.vue",
+      "category": "finance"
+    },
+    {
+      "name": "PaymentPlanTreasuryInsights",
+      "path": "frontend/src/components/finance/PaymentPlanTreasuryInsights.vue",
+      "category": "finance"
+    },
+    {
+      "name": "PaymentPlanTreasuryRecovery",
+      "path": "frontend/src/components/finance/PaymentPlanTreasuryRecovery.vue",
+      "category": "finance"
+    },
+    {
+      "name": "PaymentPlanTreasurySettings",
+      "path": "frontend/src/components/finance/PaymentPlanTreasurySettings.vue",
+      "category": "finance"
+    },
+    {
+      "name": "PaymentPlanTreasuryWorkspace",
+      "path": "frontend/src/components/finance/PaymentPlanTreasuryWorkspace.vue",
+      "category": "finance"
+    },
+    {
+      "name": "QuickEntryModal",
+      "path": "frontend/src/components/finance/QuickEntryModal.vue",
+      "category": "finance"
+    },
+    {
+      "name": "AccountExplorerFilterPanel",
+      "path": "frontend/src/components/finance/account-explorer/AccountExplorerFilterPanel.vue",
+      "category": "finance"
+    },
+    {
+      "name": "BaseDialog",
+      "path": "frontend/src/components/form/BaseDialog.vue",
+      "category": "form"
+    },
+    {
+      "name": "BaseDrawer",
+      "path": "frontend/src/components/form/BaseDrawer.vue",
+      "category": "form"
+    },
+    {
+      "name": "DocumentFormShell",
+      "path": "frontend/src/components/form/DocumentFormShell.vue",
+      "category": "form"
+    },
+    {
+      "name": "EntityPicker",
+      "path": "frontend/src/components/form/EntityPicker.vue",
+      "category": "form"
+    },
+    {
+      "name": "FieldRenderer",
+      "path": "frontend/src/components/form/FieldRenderer.vue",
+      "category": "form"
+    },
+    {
+      "name": "ValidationSummary",
+      "path": "frontend/src/components/form/ValidationSummary.vue",
+      "category": "form"
+    },
+    {
+      "name": "PointToast",
+      "path": "frontend/src/components/gamification/PointToast.vue",
+      "category": "gamification"
+    },
+    {
+      "name": "ContractFormModal",
+      "path": "frontend/src/components/hr/ContractFormModal.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeAttendanceTab",
+      "path": "frontend/src/components/hr/EmployeeAttendanceTab.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeBreakAssignmentsTab",
+      "path": "frontend/src/components/hr/EmployeeBreakAssignmentsTab.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeConnectionsTab",
+      "path": "frontend/src/components/hr/EmployeeConnectionsTab.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeContractTab",
+      "path": "frontend/src/components/hr/EmployeeContractTab.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeHolidayAssignmentsTab",
+      "path": "frontend/src/components/hr/EmployeeHolidayAssignmentsTab.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeLeaveAllocationPanel",
+      "path": "frontend/src/components/hr/EmployeeLeaveAllocationPanel.vue",
+      "category": "hr"
+    },
+    {
+      "name": "EmployeeOnboardingCard",
+      "path": "frontend/src/components/hr/EmployeeOnboardingCard.vue",
+      "category": "hr"
+    },
+    {
+      "name": "HRHeader",
+      "path": "frontend/src/components/hr/HRHeader.vue",
+      "category": "hr"
+    },
+    {
+      "name": "HRKPI",
+      "path": "frontend/src/components/hr/HRKPI.vue",
+      "category": "hr"
+    },
+    {
+      "name": "InventoryHeader",
+      "path": "frontend/src/components/inventory/InventoryHeader.vue",
+      "category": "inventory"
+    },
+    {
+      "name": "InventoryKPI",
+      "path": "frontend/src/components/inventory/InventoryKPI.vue",
+      "category": "inventory"
+    },
+    {
+      "name": "InventoryQuickActions",
+      "path": "frontend/src/components/inventory/InventoryQuickActions.vue",
+      "category": "inventory"
+    },
+    {
+      "name": "MaterialShortageList",
+      "path": "frontend/src/components/inventory/MaterialShortageList.vue",
+      "category": "inventory"
+    },
+    {
+      "name": "ItemAnalytics",
+      "path": "frontend/src/components/items/ItemAnalytics.vue",
+      "category": "items"
+    },
+    {
+      "name": "ItemConnectionDrawer",
+      "path": "frontend/src/components/items/ItemConnectionDrawer.vue",
+      "category": "items"
+    },
+    {
+      "name": "ItemDomainPanel",
+      "path": "frontend/src/components/items/ItemDomainPanel.vue",
+      "category": "items"
+    },
+    {
+      "name": "JalaliCalendarShell",
+      "path": "frontend/src/components/jalali/JalaliCalendarShell.vue",
+      "category": "jalali"
+    },
+    {
+      "name": "ConditionalFormattingPanel",
+      "path": "frontend/src/components/list-view/ConditionalFormattingPanel.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ConditionalRuleValueInput",
+      "path": "frontend/src/components/list-view/ConditionalRuleValueInput.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewBulkActionBar",
+      "path": "frontend/src/components/list-view/ListViewBulkActionBar.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewEmptyState",
+      "path": "frontend/src/components/list-view/ListViewEmptyState.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewGanttRenderer",
+      "path": "frontend/src/components/list-view/ListViewGanttRenderer.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewHeader",
+      "path": "frontend/src/components/list-view/ListViewHeader.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewKanbanRenderer",
+      "path": "frontend/src/components/list-view/ListViewKanbanRenderer.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewLoadingOverlay",
+      "path": "frontend/src/components/list-view/ListViewLoadingOverlay.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewPaginationControls",
+      "path": "frontend/src/components/list-view/ListViewPaginationControls.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewSettingsPanel",
+      "path": "frontend/src/components/list-view/ListViewSettingsPanel.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ListViewSwitcher",
+      "path": "frontend/src/components/list-view/ListViewSwitcher.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "LucideIconPicker",
+      "path": "frontend/src/components/list-view/LucideIconPicker.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "PropertyVisibilityPanel",
+      "path": "frontend/src/components/list-view/PropertyVisibilityPanel.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ReportDashboard",
+      "path": "frontend/src/components/list-view/ReportDashboard.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "SortRulesPanel",
+      "path": "frontend/src/components/list-view/SortRulesPanel.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "UnsavedViewBar",
+      "path": "frontend/src/components/list-view/UnsavedViewBar.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "ViewTabBar",
+      "path": "frontend/src/components/list-view/ViewTabBar.vue",
+      "category": "list-view"
+    },
+    {
+      "name": "EmployeeDocumentActivityAccordion",
+      "path": "frontend/src/components/manager/EmployeeDocumentActivityAccordion.vue",
+      "category": "manager"
+    },
+    {
+      "name": "DailyFulfillmentPreviewNode",
+      "path": "frontend/src/components/manufacturing/DailyFulfillmentPreviewNode.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "FormulaReviewTreeNode",
+      "path": "frontend/src/components/manufacturing/FormulaReviewTreeNode.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ManufactureReviewSidePanel",
+      "path": "frontend/src/components/manufacturing/ManufactureReviewSidePanel.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ManufacturingModuleGrid",
+      "path": "frontend/src/components/manufacturing/ManufacturingModuleGrid.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ProductionHeader",
+      "path": "frontend/src/components/manufacturing/ProductionHeader.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ProductionJourneyStepper",
+      "path": "frontend/src/components/manufacturing/ProductionJourneyStepper.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ProductionKPI",
+      "path": "frontend/src/components/manufacturing/ProductionKPI.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ProductionNextAction",
+      "path": "frontend/src/components/manufacturing/ProductionNextAction.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "WorkOrderExecutionV2",
+      "path": "frontend/src/components/manufacturing/WorkOrderExecutionV2.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "WorkOrderMaterialsEditor",
+      "path": "frontend/src/components/manufacturing/WorkOrderMaterialsEditor.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "WorkOrderStatus",
+      "path": "frontend/src/components/manufacturing/WorkOrderStatus.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "ManufactureReviewSidePanel",
+      "path": "frontend/src/components/manufacturing/work-order/ManufactureReviewSidePanel.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "WorkOrderExecution",
+      "path": "frontend/src/components/manufacturing/work-order/WorkOrderExecution.vue",
+      "category": "manufacturing"
+    },
+    {
+      "name": "NotesCollaborationPanel",
+      "path": "frontend/src/components/notes/NotesCollaborationPanel.vue",
+      "category": "notes"
+    },
+    {
+      "name": "NotesHistoryPanel",
+      "path": "frontend/src/components/notes/NotesHistoryPanel.vue",
+      "category": "notes"
+    },
+    {
+      "name": "NotesSidebarTab",
+      "path": "frontend/src/components/notes/NotesSidebarTab.vue",
+      "category": "notes"
+    },
+    {
+      "name": "NotionBlockEditor",
+      "path": "frontend/src/components/notes/NotionBlockEditor.vue",
+      "category": "notes"
+    },
+    {
+      "name": "FileChecklistSection",
+      "path": "frontend/src/components/party/FileChecklistSection.vue",
+      "category": "party"
+    },
+    {
+      "name": "PartyDetailShell",
+      "path": "frontend/src/components/party/PartyDetailShell.vue",
+      "category": "party"
+    },
+    {
+      "name": "DailyTrendChart",
+      "path": "frontend/src/components/procurement/DailyTrendChart.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ItemAnalytics",
+      "path": "frontend/src/components/procurement/ItemAnalytics.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PaymentScheduleEditor",
+      "path": "frontend/src/components/procurement/PaymentScheduleEditor.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PendingPurchaseOrders",
+      "path": "frontend/src/components/procurement/PendingPurchaseOrders.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementExceptionTabs",
+      "path": "frontend/src/components/procurement/ProcurementExceptionTabs.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementHeader",
+      "path": "frontend/src/components/procurement/ProcurementHeader.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementKPI",
+      "path": "frontend/src/components/procurement/ProcurementKPI.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementQuickActions",
+      "path": "frontend/src/components/procurement/ProcurementQuickActions.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseInvoiceAdvancedFields",
+      "path": "frontend/src/components/procurement/PurchaseInvoiceAdvancedFields.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseInvoiceFlowView",
+      "path": "frontend/src/components/procurement/PurchaseInvoiceFlowView.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseInvoiceReceiptsPanel",
+      "path": "frontend/src/components/procurement/PurchaseInvoiceReceiptsPanel.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseInvoiceSourceImporter",
+      "path": "frontend/src/components/procurement/PurchaseInvoiceSourceImporter.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseInvoiceSummary",
+      "path": "frontend/src/components/procurement/PurchaseInvoiceSummary.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseOrderActionCenter",
+      "path": "frontend/src/components/procurement/PurchaseOrderActionCenter.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseOrderNextActions",
+      "path": "frontend/src/components/procurement/PurchaseOrderNextActions.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "PurchaseTrend",
+      "path": "frontend/src/components/procurement/PurchaseTrend.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ReceiptVsInvoice",
+      "path": "frontend/src/components/procurement/ReceiptVsInvoice.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "RecentPurchases",
+      "path": "frontend/src/components/procurement/RecentPurchases.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "StatusBreakdown",
+      "path": "frontend/src/components/procurement/StatusBreakdown.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "SupplierAnalyticsTable",
+      "path": "frontend/src/components/procurement/SupplierAnalyticsTable.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "SupplierEditDrawer",
+      "path": "frontend/src/components/procurement/SupplierEditDrawer.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "SupplierOverview",
+      "path": "frontend/src/components/procurement/SupplierOverview.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementActionCenter",
+      "path": "frontend/src/components/procurement/foundation/ProcurementActionCenter.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementActivityPanel",
+      "path": "frontend/src/components/procurement/foundation/ProcurementActivityPanel.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementApprovalBar",
+      "path": "frontend/src/components/procurement/foundation/ProcurementApprovalBar.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementAttachmentsPanel",
+      "path": "frontend/src/components/procurement/foundation/ProcurementAttachmentsPanel.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementDocumentActions",
+      "path": "frontend/src/components/procurement/foundation/ProcurementDocumentActions.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementDocumentFlow",
+      "path": "frontend/src/components/procurement/foundation/ProcurementDocumentFlow.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementDocumentShell",
+      "path": "frontend/src/components/procurement/foundation/ProcurementDocumentShell.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementDocumentSummary",
+      "path": "frontend/src/components/procurement/foundation/ProcurementDocumentSummary.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementItemsEditor",
+      "path": "frontend/src/components/procurement/foundation/ProcurementItemsEditor.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementKpiGrid",
+      "path": "frontend/src/components/procurement/foundation/ProcurementKpiGrid.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementListPage",
+      "path": "frontend/src/components/procurement/foundation/ProcurementListPage.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementModuleGrid",
+      "path": "frontend/src/components/procurement/foundation/ProcurementModuleGrid.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementModuleHero",
+      "path": "frontend/src/components/procurement/foundation/ProcurementModuleHero.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementOperationsSection",
+      "path": "frontend/src/components/procurement/foundation/ProcurementOperationsSection.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementOperationsShell",
+      "path": "frontend/src/components/procurement/foundation/ProcurementOperationsShell.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementPolicyPanel",
+      "path": "frontend/src/components/procurement/foundation/ProcurementPolicyPanel.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementRelatedDocuments",
+      "path": "frontend/src/components/procurement/foundation/ProcurementRelatedDocuments.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementSmartNextActions",
+      "path": "frontend/src/components/procurement/foundation/ProcurementSmartNextActions.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ProcurementTransactionForm",
+      "path": "frontend/src/components/procurement/foundation/ProcurementTransactionForm.vue",
+      "category": "procurement"
+    },
+    {
+      "name": "ManagementBI",
+      "path": "frontend/src/components/reports/ManagementBI.vue",
+      "category": "reports"
+    },
+    {
+      "name": "ReportBuilder",
+      "path": "frontend/src/components/reports/ReportBuilder.vue",
+      "category": "reports"
+    },
+    {
+      "name": "AverageSales",
+      "path": "frontend/src/components/sales/AverageSales.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesHeader",
+      "path": "frontend/src/components/sales/SalesHeader.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesKPI",
+      "path": "frontend/src/components/sales/SalesKPI.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesModuleGrid",
+      "path": "frontend/src/components/sales/SalesModuleGrid.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesTrendForecast",
+      "path": "frontend/src/components/sales/SalesTrendForecast.vue",
+      "category": "sales"
+    },
+    {
+      "name": "ShiftSalesChart",
+      "path": "frontend/src/components/sales/ShiftSalesChart.vue",
+      "category": "sales"
+    },
+    {
+      "name": "TopItems",
+      "path": "frontend/src/components/sales/TopItems.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesDashboardAnalytics",
+      "path": "frontend/src/components/sales/dashboard/SalesDashboardAnalytics.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesDashboardFilters",
+      "path": "frontend/src/components/sales/dashboard/SalesDashboardFilters.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesDashboardNavigation",
+      "path": "frontend/src/components/sales/dashboard/SalesDashboardNavigation.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesDashboardPage",
+      "path": "frontend/src/components/sales/dashboard/SalesDashboardPage.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesTopItemsTable",
+      "path": "frontend/src/components/sales/dashboard/SalesTopItemsTable.vue",
+      "category": "sales"
+    },
+    {
+      "name": "ReportAccordion",
+      "path": "frontend/src/components/sales/reports/ReportAccordion.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesInvoicesTable",
+      "path": "frontend/src/components/sales/reports/SalesInvoicesTable.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesItemGroupDonut",
+      "path": "frontend/src/components/sales/reports/SalesItemGroupDonut.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesItemsTable",
+      "path": "frontend/src/components/sales/reports/SalesItemsTable.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesReportDrawer",
+      "path": "frontend/src/components/sales/reports/SalesReportDrawer.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesReportFilters",
+      "path": "frontend/src/components/sales/reports/SalesReportFilters.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesReportPagination",
+      "path": "frontend/src/components/sales/reports/SalesReportPagination.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesSummaryCards",
+      "path": "frontend/src/components/sales/reports/SalesSummaryCards.vue",
+      "category": "sales"
+    },
+    {
+      "name": "SalesTrendChart",
+      "path": "frontend/src/components/sales/reports/SalesTrendChart.vue",
+      "category": "sales"
+    },
+    {
+      "name": "AdvancedFilterBuilder",
+      "path": "frontend/src/components/shared/AdvancedFilterBuilder.vue",
+      "category": "shared"
+    },
+    {
+      "name": "CombinedDashboard",
+      "path": "frontend/src/components/shared/CombinedDashboard.vue",
+      "category": "shared"
+    },
+    {
+      "name": "CompanyIncomeExpenseChart",
+      "path": "frontend/src/components/shared/CompanyIncomeExpenseChart.vue",
+      "category": "shared"
+    },
+    {
+      "name": "CompanyRevenueTrendChart",
+      "path": "frontend/src/components/shared/CompanyRevenueTrendChart.vue",
+      "category": "shared"
+    },
+    {
+      "name": "CompanySwitcher",
+      "path": "frontend/src/components/shared/CompanySwitcher.vue",
+      "category": "shared"
+    },
+    {
+      "name": "CopyLinkButton",
+      "path": "frontend/src/components/shared/CopyLinkButton.vue",
+      "category": "shared"
+    },
+    {
+      "name": "DashboardExportButton",
+      "path": "frontend/src/components/shared/DashboardExportButton.vue",
+      "category": "shared"
+    },
+    {
+      "name": "DocField",
+      "path": "frontend/src/components/shared/DocField.vue",
+      "category": "shared"
+    },
+    {
+      "name": "DocumentTaskButton",
+      "path": "frontend/src/components/shared/DocumentTaskButton.vue",
+      "category": "shared"
+    },
+    {
+      "name": "EditableTable",
+      "path": "frontend/src/components/shared/EditableTable.vue",
+      "category": "shared"
+    },
+    {
+      "name": "EmptyState",
+      "path": "frontend/src/components/shared/EmptyState.vue",
+      "category": "shared"
+    },
+    {
+      "name": "ExportModal",
+      "path": "frontend/src/components/shared/ExportModal.vue",
+      "category": "shared"
+    },
+    {
+      "name": "GenericCalendar",
+      "path": "frontend/src/components/shared/GenericCalendar.vue",
+      "category": "shared"
+    },
+    {
+      "name": "GenericListView",
+      "path": "frontend/src/components/shared/GenericListView.vue",
+      "category": "shared"
+    },
+    {
+      "name": "ItemSearchSelect",
+      "path": "frontend/src/components/shared/ItemSearchSelect.vue",
+      "category": "shared"
+    },
+    {
+      "name": "JalaliDatePicker",
+      "path": "frontend/src/components/shared/JalaliDatePicker.vue",
+      "category": "shared"
+    },
+    {
+      "name": "LoadingSpinner",
+      "path": "frontend/src/components/shared/LoadingSpinner.vue",
+      "category": "shared"
+    },
+    {
+      "name": "MultiCompanyDashboard",
+      "path": "frontend/src/components/shared/MultiCompanyDashboard.vue",
+      "category": "shared"
+    },
+    {
+      "name": "PersianDateInput",
+      "path": "frontend/src/components/shared/PersianDateInput.vue",
+      "category": "shared"
+    },
+    {
+      "name": "PersianNumberInput",
+      "path": "frontend/src/components/shared/PersianNumberInput.vue",
+      "category": "shared"
+    },
+    {
+      "name": "QuickCreateModal",
+      "path": "frontend/src/components/shared/QuickCreateModal.vue",
+      "category": "shared"
+    },
+    {
+      "name": "RowEditModal",
+      "path": "frontend/src/components/shared/RowEditModal.vue",
+      "category": "shared"
+    },
+    {
+      "name": "RowViewModal",
+      "path": "frontend/src/components/shared/RowViewModal.vue",
+      "category": "shared"
+    },
+    {
+      "name": "SearchableDropdown",
+      "path": "frontend/src/components/shared/SearchableDropdown.vue",
+      "category": "shared"
+    },
+    {
+      "name": "SearchableSelect",
+      "path": "frontend/src/components/shared/SearchableSelect.vue",
+      "category": "shared"
+    },
+    {
       "name": "SmartDataTable",
       "path": "frontend/src/components/shared/SmartDataTable.vue",
       "category": "shared"
+    },
+    {
+      "name": "StatCard",
+      "path": "frontend/src/components/shared/StatCard.vue",
+      "category": "shared"
+    },
+    {
+      "name": "StatusBadge",
+      "path": "frontend/src/components/shared/StatusBadge.vue",
+      "category": "shared"
+    },
+    {
+      "name": "TaskNotificationDropdown",
+      "path": "frontend/src/components/shared/TaskNotificationDropdown.vue",
+      "category": "shared"
+    },
+    {
+      "name": "UiDialog",
+      "path": "frontend/src/components/shared/UiDialog.vue",
+      "category": "shared"
+    },
+    {
+      "name": "UserMenuDropdown",
+      "path": "frontend/src/components/shared/UserMenuDropdown.vue",
+      "category": "shared"
+    },
+    {
+      "name": "CompanyTemplateStations",
+      "path": "frontend/src/components/stock-count/CompanyTemplateStations.vue",
+      "category": "stock-count"
+    },
+    {
+      "name": "StationTemplateEditor",
+      "path": "frontend/src/components/stock-count/StationTemplateEditor.vue",
+      "category": "stock-count"
+    },
+    {
+      "name": "TemplateItemFilter",
+      "path": "frontend/src/components/stock-count/TemplateItemFilter.vue",
+      "category": "stock-count"
+    },
+    {
+      "name": "AnalysisReportTable",
+      "path": "frontend/src/components/stock-reconciliation/AnalysisReportTable.vue",
+      "category": "stock-reconciliation"
+    },
+    {
+      "name": "Supplier360Header",
+      "path": "frontend/src/components/supplier/Supplier360Header.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierActionCenter",
+      "path": "frontend/src/components/supplier/SupplierActionCenter.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierDeliveryKpiGrid",
+      "path": "frontend/src/components/supplier/SupplierDeliveryKpiGrid.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierDeliveryTrendChart",
+      "path": "frontend/src/components/supplier/SupplierDeliveryTrendChart.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierItemPriceDrawer",
+      "path": "frontend/src/components/supplier/SupplierItemPriceDrawer.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierKpiGrid",
+      "path": "frontend/src/components/supplier/SupplierKpiGrid.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierOrdersDelivery",
+      "path": "frontend/src/components/supplier/SupplierOrdersDelivery.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "SupplierOverview",
+      "path": "frontend/src/components/supplier/SupplierOverview.vue",
+      "category": "supplier"
+    },
+    {
+      "name": "TransactionItemsTable",
+      "path": "frontend/src/components/table/TransactionItemsTable.vue",
+      "category": "table"
+    },
+    {
+      "name": "FloatingTaskTimer",
+      "path": "frontend/src/components/tasks/FloatingTaskTimer.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "ReportTaskSidePanel",
+      "path": "frontend/src/components/tasks/ReportTaskSidePanel.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskAccordionItem",
+      "path": "frontend/src/components/tasks/TaskAccordionItem.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskAttachments",
+      "path": "frontend/src/components/tasks/TaskAttachments.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskCalendarView",
+      "path": "frontend/src/components/tasks/TaskCalendarView.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskCreateSidePanel",
+      "path": "frontend/src/components/tasks/TaskCreateSidePanel.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskDetailSidePanel",
+      "path": "frontend/src/components/tasks/TaskDetailSidePanel.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskKanbanBoard",
+      "path": "frontend/src/components/tasks/TaskKanbanBoard.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskTableView",
+      "path": "frontend/src/components/tasks/TaskTableView.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskTemplateDropdown",
+      "path": "frontend/src/components/tasks/TaskTemplateDropdown.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "TaskTemplateEditorSidePanel",
+      "path": "frontend/src/components/tasks/TaskTemplateEditorSidePanel.vue",
+      "category": "tasks"
+    },
+    {
+      "name": "UtilitiesCommandCenter",
+      "path": "frontend/src/components/utilities/UtilitiesCommandCenter.vue",
+      "category": "utilities"
+    },
+    {
+      "name": "UtilitiesContextChatPanel",
+      "path": "frontend/src/components/utilities/UtilitiesContextChatPanel.vue",
+      "category": "utilities"
+    },
+    {
+      "name": "UtilitiesQuickCapturePanel",
+      "path": "frontend/src/components/utilities/UtilitiesQuickCapturePanel.vue",
+      "category": "utilities"
+    },
+    {
+      "name": "NotificationCenter",
+      "path": "frontend/src/components/ux-core/NotificationCenter.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "UxCommandPalette",
+      "path": "frontend/src/components/ux-core/UxCommandPalette.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "UxConnections",
+      "path": "frontend/src/components/ux-core/UxConnections.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "UxInbox",
+      "path": "frontend/src/components/ux-core/UxInbox.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "UxProgressiveDisclosure",
+      "path": "frontend/src/components/ux-core/UxProgressiveDisclosure.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "UxTimeline",
+      "path": "frontend/src/components/ux-core/UxTimeline.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "UxWorkspace",
+      "path": "frontend/src/components/ux-core/UxWorkspace.vue",
+      "category": "ux-core"
+    },
+    {
+      "name": "WorkspaceChartRenderer",
+      "path": "frontend/src/components/workspace/WorkspaceChartRenderer.vue",
+      "category": "workspace"
     }
   ]
 }
