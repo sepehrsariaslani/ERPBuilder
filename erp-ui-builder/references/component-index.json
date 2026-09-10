@@ -1,0 +1,9 @@
+{
+  "components": [
+    {
+      "name": "SmartDataTable",
+      "path": "frontend/src/components/shared/SmartDataTable.vue",
+      "category": "shared"
+    }
+  ]
+}
