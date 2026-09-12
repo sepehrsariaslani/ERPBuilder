@@ -40,7 +40,7 @@ for path in "$root/pages/$domain" "$root/components/$domain"; do
 done
 
 if [[ "$domain" == "procurement" ]]; then
-  terms="$terms|purchase|material|supplier|invoice|receipt|order"
+  terms="procurement|purchase|material|supplier|subcontract|quality|landedcost"
 fi
 if [[ -d "$root/services" ]]; then
   service_matches="$(find "$root/services" -type f \( -name '*.vue' -o -name '*.js' -o -name '*.ts' \) -print \
