@@ -51,17 +51,20 @@ ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src bash tests/validate-c
 
 ```bash
 export ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src
+CANONICAL_COMPONENTS="$(sed -n 's/^## //p' erp-ui-builder/references/component-guide.md | jq -R . | jq -s .)"
 rg --files "$ERP_UI_SOURCE_ROOT/components" -g '*.vue' \
   | sed "s#^$ERP_UI_SOURCE_ROOT/##" \
   | sed 's#^#frontend/src/#' \
   | sort \
-  | jq -R -s '
-      split("\\n")
+  | jq --argjson canonical "$CANONICAL_COMPONENTS" -R -s '
+      split("\n")
       | map(select(length > 0) | (split("/")) as $segments | {
           name: ($segments[-1] | sub("\\.vue$"; "")),
           path: ($segments | join("/")),
           category: (if ($segments | length) > 4 then $segments[3] else "root" end)
-        })
+        } as $component | if ($canonical | index($component.name)) then $component + {
+          guide: ("references/component-guide.md#" + ($component.name | ascii_downcase))
+        } else $component end)
       | {components: .}
     ' > erp-ui-builder/references/component-index.json
 ```
@@ -72,5 +75,6 @@ rg --files "$ERP_UI_SOURCE_ROOT/components" -g '*.vue' \
 export ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src
 bash tests/validate-package.sh && \
   bash tests/validate-catalog.sh && \
-  bash tests/find-ui-component.test.sh
+  bash tests/find-ui-component.test.sh && \
+  bash tests/scan-ui-context.test.sh
 ```

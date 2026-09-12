@@ -7,3 +7,5 @@ for file in SKILL.md agents/openai.yaml references/hesabyar-ui-catalog.md script
 done
 rg -q 'find-ui-component.sh' "$root/erp-ui-builder/SKILL.md"
 rg -q '^## نصب$' "$root/README.md"
+rg -q -- '--argjson canonical' "$root/README.md"
+rg -q 'tests/scan-ui-context.test.sh' "$root/README.md"
