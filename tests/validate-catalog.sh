@@ -19,19 +19,22 @@ fi
 
 expected_index="$(mktemp)"
 trap 'rm -f "$expected_index"' EXIT
+canonical_json="$(sed -n 's/^## //p' "$root/erp-ui-builder/references/component-guide.md" | jq -R . | jq -s .)"
 
 jq -e '.components | length > 0' "$root/erp-ui-builder/references/component-index.json" >/dev/null
 jq -e '.components[] | select(.name == "SmartDataTable" and .path == "frontend/src/components/shared/SmartDataTable.vue")' "$root/erp-ui-builder/references/component-index.json" >/dev/null
 rg -q 'AssetReports.*frontend/src/pages/AssetReports.vue|frontend/src/pages/AssetReports.vue' "$root/erp-ui-builder/references/component-guide.md"
 rg -q 'frontend/src/components/shared' "$root/erp-ui-builder/references/directory-map.md"
 
-rg --files "$components_root" -g '*.vue' | sed "s#^$source_root/##" | sed 's#^#frontend/src/#' | sort | jq -R -s '
+rg --files "$components_root" -g '*.vue' | sed "s#^$source_root/##" | sed 's#^#frontend/src/#' | sort | jq --argjson canonical "$canonical_json" -R -s '
   split("\n")
   | map(select(length > 0) | (split("/")) as $segments | {
       name: ($segments[-1] | sub("\\.vue$"; "")),
       path: ($segments | join("/")),
       category: (if ($segments | length) > 4 then $segments[3] else "root" end)
-    })
+    } as $component | if ($canonical | index($component.name)) then $component + {
+      guide: ("references/component-guide.md#" + ($component.name | ascii_downcase))
+    } else $component end)
   | {components: .}
 ' > "$expected_index"
 diff -u "$expected_index" "$root/erp-ui-builder/references/component-index.json"

@@ -69,8 +69,8 @@ rg --files "$ERP_UI_SOURCE_ROOT/components" -g '*.vue' \
 در پایان، بررسی‌های بسته را با همان ریشهٔ مبدأ اجرا کنید:
 
 ```bash
-ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src \
-  bash tests/validate-package.sh && \
+export ERP_UI_SOURCE_ROOT=/absolute/path/to/accounts/frontend/src
+bash tests/validate-package.sh && \
   bash tests/validate-catalog.sh && \
   bash tests/find-ui-component.test.sh
 ```

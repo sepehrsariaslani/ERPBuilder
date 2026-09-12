@@ -53,7 +53,8 @@
     {
       "name": "DocumentActionDrawer",
       "path": "frontend/src/components/DocumentActionDrawer.vue",
-      "category": "root"
+      "category": "root",
+      "guide": "references/component-guide.md#documentactiondrawer"
     },
     {
       "name": "DynamicListManager",
@@ -318,12 +319,14 @@
     {
       "name": "ReportDocumentSidePanel",
       "path": "frontend/src/components/ReportDocumentSidePanel.vue",
-      "category": "root"
+      "category": "root",
+      "guide": "references/component-guide.md#reportdocumentsidepanel"
     },
     {
       "name": "ResizableSidePanel",
       "path": "frontend/src/components/ResizableSidePanel.vue",
-      "category": "root"
+      "category": "root",
+      "guide": "references/component-guide.md#resizablesidepanel"
     },
     {
       "name": "RowEditSidePanel",
@@ -468,7 +471,8 @@
     {
       "name": "DocumentActivityButton",
       "path": "frontend/src/components/activity/DocumentActivityButton.vue",
-      "category": "activity"
+      "category": "activity",
+      "guide": "references/component-guide.md#documentactivitybutton"
     },
     {
       "name": "DocumentActivityPanel",
@@ -618,7 +622,8 @@
     {
       "name": "DashboardShell",
       "path": "frontend/src/components/dashboard/DashboardShell.vue",
-      "category": "dashboard"
+      "category": "dashboard",
+      "guide": "references/component-guide.md#dashboardshell"
     },
     {
       "name": "DashboardSingleKpi",
@@ -633,12 +638,14 @@
     {
       "name": "AppStatusBadge",
       "path": "frontend/src/components/design/AppStatusBadge.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#appstatusbadge"
     },
     {
       "name": "Button",
       "path": "frontend/src/components/design/Button.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#button"
     },
     {
       "name": "Checkbox",
@@ -653,7 +660,8 @@
     {
       "name": "IconButton",
       "path": "frontend/src/components/design/IconButton.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#iconbutton"
     },
     {
       "name": "InfoCell",
@@ -663,12 +671,14 @@
     {
       "name": "MetricCard",
       "path": "frontend/src/components/design/MetricCard.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#metriccard"
     },
     {
       "name": "PageHeader",
       "path": "frontend/src/components/design/PageHeader.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#pageheader"
     },
     {
       "name": "Popover",
@@ -683,12 +693,14 @@
     {
       "name": "Skeleton",
       "path": "frontend/src/components/design/Skeleton.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#skeleton"
     },
     {
       "name": "StatePanel",
       "path": "frontend/src/components/design/StatePanel.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#statepanel"
     },
     {
       "name": "Switch",
@@ -703,7 +715,8 @@
     {
       "name": "Toast",
       "path": "frontend/src/components/design/Toast.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#toast"
     },
     {
       "name": "ToastViewport",
@@ -713,7 +726,8 @@
     {
       "name": "Tooltip",
       "path": "frontend/src/components/design/Tooltip.vue",
-      "category": "design"
+      "category": "design",
+      "guide": "references/component-guide.md#tooltip"
     },
     {
       "name": "AttachmentGallery",
@@ -723,7 +737,8 @@
     {
       "name": "DocumentEditableTable",
       "path": "frontend/src/components/document/DocumentEditableTable.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#documenteditabletable"
     },
     {
       "name": "DocumentExtensionSlot",
@@ -738,7 +753,8 @@
     {
       "name": "DocumentPageShell",
       "path": "frontend/src/components/document/DocumentPageShell.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#documentpageshell"
     },
     {
       "name": "DocumentPermissionsGate",
@@ -748,12 +764,14 @@
     {
       "name": "DocumentSidebarSection",
       "path": "frontend/src/components/document/DocumentSidebarSection.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#documentsidebarsection"
     },
     {
       "name": "DocumentTabs",
       "path": "frontend/src/components/document/DocumentTabs.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#documenttabs"
     },
     {
       "name": "FilePreviewModal",
@@ -763,7 +781,8 @@
     {
       "name": "KpiCard",
       "path": "frontend/src/components/document/KpiCard.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#kpicard"
     },
     {
       "name": "MetadataForm",
@@ -773,12 +792,14 @@
     {
       "name": "PageBreadcrumbs",
       "path": "frontend/src/components/document/PageBreadcrumbs.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#pagebreadcrumbs"
     },
     {
       "name": "ProcessDocumentHeader",
       "path": "frontend/src/components/document/ProcessDocumentHeader.vue",
-      "category": "document"
+      "category": "document",
+      "guide": "references/component-guide.md#processdocumentheader"
     },
     {
       "name": "BankStatementAmbiguousModal",
@@ -1168,12 +1189,14 @@
     {
       "name": "FileChecklistSection",
       "path": "frontend/src/components/party/FileChecklistSection.vue",
-      "category": "party"
+      "category": "party",
+      "guide": "references/component-guide.md#filechecklistsection"
     },
     {
       "name": "PartyDetailShell",
       "path": "frontend/src/components/party/PartyDetailShell.vue",
-      "category": "party"
+      "category": "party",
+      "guide": "references/component-guide.md#partydetailshell"
     },
     {
       "name": "DailyTrendChart",
@@ -1338,7 +1361,8 @@
     {
       "name": "ProcurementListPage",
       "path": "frontend/src/components/procurement/foundation/ProcurementListPage.vue",
-      "category": "procurement"
+      "category": "procurement",
+      "guide": "references/component-guide.md#procurementlistpage"
     },
     {
       "name": "ProcurementModuleGrid",
@@ -1543,7 +1567,8 @@
     {
       "name": "EditableTable",
       "path": "frontend/src/components/shared/EditableTable.vue",
-      "category": "shared"
+      "category": "shared",
+      "guide": "references/component-guide.md#editabletable"
     },
     {
       "name": "EmptyState",
@@ -1563,7 +1588,8 @@
     {
       "name": "GenericListView",
       "path": "frontend/src/components/shared/GenericListView.vue",
-      "category": "shared"
+      "category": "shared",
+      "guide": "references/component-guide.md#genericlistview"
     },
     {
       "name": "ItemSearchSelect",
@@ -1588,7 +1614,8 @@
     {
       "name": "PersianDateInput",
       "path": "frontend/src/components/shared/PersianDateInput.vue",
-      "category": "shared"
+      "category": "shared",
+      "guide": "references/component-guide.md#persiandateinput"
     },
     {
       "name": "PersianNumberInput",
@@ -1613,7 +1640,8 @@
     {
       "name": "SearchableDropdown",
       "path": "frontend/src/components/shared/SearchableDropdown.vue",
-      "category": "shared"
+      "category": "shared",
+      "guide": "references/component-guide.md#searchabledropdown"
     },
     {
       "name": "SearchableSelect",
@@ -1623,7 +1651,8 @@
     {
       "name": "SmartDataTable",
       "path": "frontend/src/components/shared/SmartDataTable.vue",
-      "category": "shared"
+      "category": "shared",
+      "guide": "references/component-guide.md#smartdatatable"
     },
     {
       "name": "StatCard",
@@ -1633,7 +1662,8 @@
     {
       "name": "StatusBadge",
       "path": "frontend/src/components/shared/StatusBadge.vue",
-      "category": "shared"
+      "category": "shared",
+      "guide": "references/component-guide.md#statusbadge"
     },
     {
       "name": "TaskNotificationDropdown",
@@ -1808,7 +1838,8 @@
     {
       "name": "UxProgressiveDisclosure",
       "path": "frontend/src/components/ux-core/UxProgressiveDisclosure.vue",
-      "category": "ux-core"
+      "category": "ux-core",
+      "guide": "references/component-guide.md#uxprogressivedisclosure"
     },
     {
       "name": "UxTimeline",
