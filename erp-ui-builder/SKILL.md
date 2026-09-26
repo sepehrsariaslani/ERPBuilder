@@ -13,11 +13,27 @@ Apply the eight principles in [principles](references/apple-erp/principles.md) t
 
 For a significant new page, redesign, design-system change, dashboard, or shared component, also read [design masters](references/apple-erp/design-masters.md). It translates documented work from Steve Jobs, Jony Ive, Bill Atkinson, Susan Kare, Jef Raskin, Larry Tesler, Don Norman, Bruce Tognazzini, Dieter Rams, Hartmut Esslinger/frog, modern Apple Human Interface Design, Edward Tufte, and Nielsen/Molich into operational ERP checks. These are lenses, not visual styles or personality authority: never justify a decision only by a designer's name, and never sacrifice auditability, permissions, accessibility, or business correctness for aesthetic purity.
 
-Identify the page kind before loading design guidance. Read [information hierarchy](references/apple-erp/information-hierarchy.md), then only the relevant topic files under `references/apple-erp/`: `document-pages`, `list-pages`, `tables`, `forms`, `dashboards`, `charts-data`, `navigation`, `planning`, `kanban`, `gantt`, `status-feedback`, `actions`, `accessibility`, `writing`, `motion`, `responsive-mobile`, `performance`, `complexity-management`, and `design-tokens`. For a focused review, use [review rubric](references/apple-erp/review-rubric.md) and cite the exact local rule and observed evidence. A source-only review cannot claim measured contrast, keyboard behavior, or authenticated runtime success.
+Identify the page kind before loading design guidance. Read [information hierarchy](references/apple-erp/information-hierarchy.md), then only the relevant topic files under `references/apple-erp/`: `document-pages`, `list-pages`, `tables`, `forms`, `dashboards`, `charts-data`, `navigation`, `planning`, `kanban`, `gantt`, `status-feedback`, `actions`, `accessibility`, `writing`, `motion`, `responsive-mobile`, `performance`, `complexity-management`, and `design-tokens`. For a significant new surface or redesign, also load the craft references that match the work: `visual-direction`, `composition`, `typography-craft`, `signature-elements`, `micro-interactions`, `brand-expression`, and `visual-anti-patterns`. Finish with `polish-checklist.md`. For a focused review, use [review rubric](references/apple-erp/review-rubric.md) and cite the exact local rule and observed evidence. A source-only review cannot claim measured contrast, keyboard behavior, or authenticated runtime success.
 
 Use [complexity management](references/apple-erp/complexity-management.md) when a workflow has many fields, states, roles, or decisions: the interface should absorb mechanical work while keeping business rules, provenance, permissions, and audit evidence accessible. The `ui-ux-pro-max` reference contributes targeted web UX checks; its style generators, palette presets, fixed native touch sizes, and automatic `design-system/MASTER.md` generation do not supersede Hesabyar's live tokens and Showcase.
 
 The layer mapping is foundations (existing tokens/theme) → primitives (`components/design` and shared controls) → ERP compositions (`components/document`, `table`, `dashboard`, and domain owners) → patterns (Showcase catalog) → page shells (existing templates and page contracts). These are conceptual layers inside the current governance model, not new parallel folders or a mandate to create every named component. Search catalog, inventory, and nearby module code before extending a component or shell; add a new canonical contract only for a demonstrated shared need.
+
+### Mandatory Craft Pass
+
+A page is not finished when it is merely correct. After business correctness, permissions, accessibility, lifecycle behavior, and canonical component reuse are satisfied, perform a final craft pass in this order:
+
+1. **Visual direction** — choose one task-appropriate visual thesis.
+2. **Composition** — align the page, establish scan rhythm, and balance density.
+3. **Typography** — refine Persian hierarchy and numeric presentation.
+4. **Spacing** — enforce tokenized rhythm and proximity.
+5. **Signature** — allow at most one useful memorable visual/interaction idea.
+6. **Micro-interactions** — polish feedback and state changes without spectacle.
+7. **Brand expression** — make the surface recognizably Hesabyar without changing familiar controls.
+8. **Restraint** — remove generic generated-UI decoration and competing emphasis.
+9. **Polish checklist** — run `references/apple-erp/polish-checklist.md` before considering the design complete.
+
+Every important page may have one memorable visual idea, but never more than one dominant idea. Correctness comes first; craft makes correctness feel clear, intentional, and premium.
 
 ## Inspect the Module First
 
