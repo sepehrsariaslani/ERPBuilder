@@ -24,7 +24,7 @@ cp -R erp-ui-builder "$CODEX_HOME/skills/"
 
 ## راهنمای طراحی و بازبینی
 
-`SKILL.md` اصول Apple-inspired را با قراردادهای موجود حسابیار ادغام می‌کند. برای هر صفحه ابتدا نوع کار را مشخص کنید و سپس فقط راهنمای مرتبط را از `erp-ui-builder/references/apple-erp/` بخوانید؛ برای مثال `document-pages.md`، `tables.md` یا `dashboards.md`. `principles.md` معیارهای پایه و `review-rubric.md` قالب بازبینی What / Why / Fix و شدت مشکل را تعریف می‌کنند. این راهنماها جایگزین tokenها، کامپوننت‌های canonical یا چرخهٔ عمر بومی ERPNext/Frappe نیستند.
+`SKILL.md` اصول Apple-inspired را با قراردادهای موجود حسابیار ادغام می‌کند. برای هر صفحه ابتدا نوع کار را مشخص کنید و سپس فقط راهنمای مرتبط را از `erp-ui-builder/references/apple-erp/` بخوانید؛ برای مثال `document-pages.md`، `tables.md` یا `dashboards.md`. `principles.md` معیارهای پایه، `design-masters.md` لنزهای اجرایی برگرفته از Jobs، Ive، Atkinson، Kare، Raskin، Tesler، Norman، Tognazzini، Rams، Esslinger، طراحی نرم‌افزار Apple و Tufte را برای ERP تعریف می‌کند، و `review-rubric.md` قالب بازبینی What / Why / Fix و شدت مشکل را مشخص می‌کند. این راهنماها جایگزین tokenها، کامپوننت‌های canonical یا چرخهٔ عمر بومی ERPNext/Frappe نیستند.
 
 قواعد منتخب `ui-ux-pro-max` برای کارایی، نمودار و مدیریت پیچیدگی نیز در همین referenceهای موضوعی ادغام شده‌اند. پیشنهادهای آمادهٔ رنگ، فونت، ظاهر و ساخت یک Design System موازی به حسابیار منتقل نشده‌اند.
 
