@@ -10,3 +10,5 @@ For each finding report **What** (specific observed problem), **Why** (the exact
 - **Low:** polish and edge cases.
 
 Keep the review proportional. Name what works and should remain. Resolve conflicts in this order: business correctness and permissions, accessibility and recoverability, familiar product patterns, then visual craft. Do not mistake visual minimalism for a successful ERP workflow.
+
+For data-heavy or touch workflows, also check keyboard/hover parity, real target size, stable loading layout, read-only versus disabled state, sortable-table semantics, and an accessible path to chart values. Check the compact and wide layouts in both themes when those surfaces are affected. Measure performance or contrast before reporting a numeric failure; generic thresholds from an external style guide are prompts to investigate, not proof that Hesabyar fails.
