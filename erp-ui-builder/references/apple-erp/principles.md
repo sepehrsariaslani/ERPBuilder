@@ -1,0 +1,7 @@
+# Principles for Hesabyar
+
+Apply these as decisions, not a visual style. Purpose: one clear job for each page and element. Agency: visible control, cancellation, safe back navigation, and recovery. Responsibility: honest state, permissions, provenance, and consequences for financial or sensitive actions. Familiarity: preserve established Hesabyar and web ERP behavior. Flexibility: work across viewport, input, ability, and text size. Simplicity: show exactly what this decision needs while keeping domain complexity accessible. Craft: finish alignment, spacing, type, copy, focus, loading, responsive and performance behavior. Delight: make completion and recovery feel fluent; avoid decorative motion.
+
+The design test is: can a new user tell where they are, what happened, what matters, and what to do next without learning backend structure? Give each page one main task and one primary action per context. These are separate from lifecycle controls that must remain visible for accounting correctness. Prefer real business language and native ERPNext/Frappe status and transitions. Never hide audit data or controls merely to make a page look minimal.
+
+Source inspiration: [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) and [Apple Design Skill](https://github.com/dickwu/apple-design-skill). Apply web ERP conventions where platform-specific HIG guidance conflicts with the product.

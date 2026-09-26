@@ -11,6 +11,10 @@ Read the section matching the page you are building. These paths are implementat
 - `frontend/src/components/design/index.js`: named exports for the primary display components.
 - `frontend/src/ux-core/pageContracts.js`: normalized page contract for `list`, `detail`, `create`, `report`, `workspace`, and `settings` page types.
 - `frontend/src/ux-core/accessibility.js`: direction, interactive, and status accessibility contracts.
+- `frontend/src/design-system/showcase/catalog.js`: live catalog of foundations, design primitives, reusable surfaces, patterns, templates, module themes, and preview contracts.
+- `frontend/src/design-system/showcase/inventory.js`: generated page/component usage inventory, canonical ownership map, manual-review classification, and usage-debt audit used by the Showcase.
+- `frontend/src/design-system/showcase/ReusableComponentPreview.vue`: local-data preview harness for reusable surfaces; row-specific modals remain page-owned because their contracts require a row context.
+- `frontend/src/pages/DesignSystemShowcase.vue`: interactive visual entry point at `/hesab/system-management/design-system`; use it to inspect a component or page composition before reusing it.
 
 Before writing local CSS or a local primitive, check these files. Use semantic intent colors for status and feedback, the configured density for operational surfaces, and the supplied RTL settings. Preserve the existing token values rather than adding arbitrary page-level colors, spacing, radii, z-indexes, or animations.
 

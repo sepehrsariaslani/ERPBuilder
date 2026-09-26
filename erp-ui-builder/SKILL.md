@@ -7,6 +7,14 @@ description: Use when building or refining Hesabyar Vue pages, reports, dashboar
 
 Build Hesabyar pages as operational ERP tools: clear hierarchy, compact scanning, predictable filters, and direct actions. Reuse the app's canonical components before creating a local substitute. The visible interface is Persian and right-to-left by default.
 
+## Apple-Inspired ERP Design Review
+
+Apply the eight principles in [principles](references/apple-erp/principles.md) to new pages, components, and design reviews. This adapts Apple's design philosophy to Hesabyar's web ERP; it does not copy iOS/macOS chrome or replace native Frappe/ERPNext behavior. The existing token values, canonical components, page contracts, and business permissions remain authoritative. Review the complete task flow, including progress, failure, recovery, and completion, not just the first screen.
+
+Identify the page kind before loading design guidance. Read [information hierarchy](references/apple-erp/information-hierarchy.md), then only the relevant topic files under `references/apple-erp/`: `document-pages`, `list-pages`, `tables`, `forms`, `dashboards`, `navigation`, `planning`, `kanban`, `gantt`, `status-feedback`, `actions`, `accessibility`, `writing`, `motion`, `responsive-mobile`, and `design-tokens`. For a focused review, use [review rubric](references/apple-erp/review-rubric.md) and cite the exact local rule and observed evidence. A source-only review cannot claim measured contrast, keyboard behavior, or authenticated runtime success.
+
+The layer mapping is foundations (existing tokens/theme) → primitives (`components/design` and shared controls) → ERP compositions (`components/document`, `table`, `dashboard`, and domain owners) → patterns (Showcase catalog) → page shells (existing templates and page contracts). These are conceptual layers inside the current governance model, not new parallel folders or a mandate to create every named component. Search catalog, inventory, and nearby module code before extending a component or shell; add a new canonical contract only for a demonstrated shared need.
+
 ## Inspect the Module First
 
 Before designing or editing a page, inspect the closest route, page, components, and relevant documentation in the same module. Follow the repository ownership pattern:
@@ -17,6 +25,53 @@ Before designing or editing a page, inspect the closest route, page, components,
 - Keep API clients in `frontend/src/services/` and module configuration/definitions in their existing `config`, `dashboard`, or domain configuration location.
 - Read the nearby page and component files before introducing a new directory or a local UI primitive. Create a new directory only when the feature owns several cohesive components.
 - Keep a page's section order consistent: page context and actions, filters, summary, primary table/chart, then side-panel or drill-down detail. Do not turn every section into a floating card.
+
+### Use the live Design System Showcase
+
+The repository's Design System Showcase is the source of truth for reusable UI discovery and preview contracts:
+
+- Read `frontend/src/design-system/showcase/catalog.js` before selecting a reusable component, pattern, or template; use the listed owner path and preview contract instead of inventing a parallel primitive.
+- Read `frontend/src/design-system/showcase/inventory.js` when the task depends on page coverage, component usage, canonical paths, duplicate-name review, or manual-review pages. It is generated from the current `src/components/**/*.vue` and `src/pages/**/*.vue` topology.
+- In development, the Vite Showcase inventory watcher refreshes that inventory after component/page add, change, or removal. After source changes, run the focused inventory check when you need a deterministic contract check; do not treat a stale generated file as evidence of current coverage.
+- When adding a reusable component, add its catalog entry and preview harness branch (or an explicit page-owned preview for context-only components), then expose the usage path and exact source in the Showcase. Keep same-name implementations separate until source and ownership review proves they are true aliases.
+
+## Directory Ownership and Incremental Cleanup
+
+Treat directory ownership as part of the feature contract. Before creating or moving a file, identify its business module and place it beside the other files that own the same workflow. Do not reorganize the whole application as a prerequisite for a small feature, and do not create a second parallel directory convention.
+
+For the Accounts frontend, use this ownership layout:
+
+```text
+frontend/src/
+├── pages/<domain>/            # route-level screens
+├── components/<domain>/      # reusable components owned by one domain
+├── services/<domain>/        # API clients and transport adapters
+├── dashboard/<domain>/       # dashboard definitions, providers, selectors, actions
+├── config/<domain>/          # domain configuration and document catalogs
+├── navigation/<domain>/      # only when navigation is not owned by the route installer
+└── tests/<domain>/           # focused contracts and behavior tests
+```
+
+Cross-domain primitives belong in the existing shared owners: `components/design`, `components/shared`, `components/document`, `components/dashboard`, `components/table`, `composables`, or `services` only when the client is genuinely shared. Never create redundant paths such as `components/components`, `pages/pages`, `services/services`, or `utils/utils`.
+
+For the Python side, keep business modules at the `accounts/<domain>/` boundary and prefer this internal shape when a domain has enough code to justify it:
+
+```text
+accounts/<domain>/
+├── api/                       # thin whitelisted entrypoints and response shaping
+├── services/                  # use-case orchestration
+├── domain/                    # business rules and policies
+├── queries/                   # read models and report queries
+└── integrations/              # Frappe, ERPNext, provider, or external adapters
+```
+
+Keep Frappe-owned paths such as `accounts/hesab/doctype/`, `hooks.py`, `patches/`, fixtures, and report definitions in their required locations unless a deliberate metadata migration has been planned. Do not duplicate authoritative ERPNext DocTypes merely to make the directory look uniform.
+
+`accounts/accounts_api.py` is a legacy public compatibility facade, not a place for new domain logic. When decomposing it, move coherent endpoint groups into their owning domain, preserve the public `accounts.accounts_api.<method>` paths through temporary wrappers, and remove wrappers only after callers, hooks, tests, permissions, and authenticated runtime behavior have been verified. New frontend work must call a domain-owned client under `services/<domain>/`, not add more endpoint strings to a page or to the legacy facade.
+
+Every newly established domain should have a short `README.md` or module manifest that records its pages, routes, API clients, backend entrypoints, DocTypes, permissions, reports, jobs, and external integrations. This is a navigation map for developers; it is not a substitute for route or permission registration.
+
+Directory cleanup is incremental: inventory references first, introduce the target owner, move one cohesive slice at a time, keep compatibility shims where public paths exist, move its tests with it, and delete an old location only after reference and runtime checks pass. A pure source reorganization does not by itself authorize migrate, restart, build, or deployment; assess those separately after the move.
 
 ## Choose the Page Pattern
 
@@ -29,12 +84,19 @@ Pick the pattern that matches the user's work, then inspect its reference before
 - **Dashboard:** Prefer `DashboardShell` and the existing sales dashboard definitions. Use KPI cards only for key measures, then charts/tables that answer the next operational question. Do not create a marketing-style hero.
 - **Asset report:** Follow the report-selection and execution pattern in `AssetReports.vue`: Persian report names, a compact filter area, one clear run action, summary after execution, and a dense result table. Keep report engine identifiers internal; never expose English report names to the user.
 
+### Settings Page Pattern
+
+- Whenever a settings page is requested, begin with the existing shared settings template—especially `SettingsSinglePage.vue` and the closest operational reference such as `ProcurementSettings.vue`—before considering a new layout.
+- Keep the established settings contract: Persian RTL header and breadcrumbs, tabbed sections, shared `Button`/`StatePanel` feedback, refresh, explicit save action, visible unsaved state, permission-aware read-only behavior, and native backend persistence.
+- Do not route a new settings workflow through a generic document detail shell or invent a one-off settings page when the shared settings pattern applies. Use `MetadataForm` inside that shell when the underlying DocType fields should remain metadata-driven.
+
 ## Canonical Component Rules
 
 - Start with the design-system tokens and existing design components. Preserve the configured RTL direction, density, theme, spacing, radius, semantic intent colors, and stacking order instead of introducing page-local equivalents.
 - Prefer `PageHeader`, `Button`, `IconButton`, `MetricCard`, `AppStatusBadge`, `StatePanel`, `Skeleton`, `Tooltip`, and `Toast` from `components/design` when they fit the existing page pattern.
 - Use `PersianDateInput` for Persian-facing date filters and document dates. Store the model value as the ERP ISO date used by APIs.
 - Use `SearchableDropdown` for products, accounts, parties, BOMs, warehouses, and other potentially long option sets. Provide a real `search-fn`, a visible placeholder, and matching `label-field` / `value-field`.
+- For relational `SearchableDropdown` fields, keep the shared permission-aware create-on-no-results flow enabled and pass the linked DocType explicitly whenever it is available. After a successful empty search, open the shared Persian quick-create side panel; show only required fields first and provide a details view that loads the DocType's supported ordinary form fields while preserving every value already entered. Submit the expanded fields, retain unsaved-change protection, and select the created record back into the originating dropdown. Do not imply that the generic panel edits child tables or attachments; those need their native full form. Do not build a separate create panel in each page. Keep local enum/options selectors and sensitive system records non-creatable, and respect server create permission and full-form lifecycle requirements.
 - Use direct Vue markup for form labels and controls. Do not place ordinary inputs inside locally-declared components that rely on a runtime `template` string.
 - Use `GenericListView` for record collections. Configure columns, filters, quick filters, row-click navigation, and slot renderers; do not add a second custom table for the same records.
 - Use `SmartDataTable` for ledger, reconciliation, analytical, and report-result tables. Configure its columns, frozen columns, widths, filters, totals, and row-click drill-down rather than hand-building a `<table>`.
@@ -70,6 +132,15 @@ Users bring expectations from the Hesabyar screens and other familiar Persian ER
 - Introduce a new interaction model only when it materially improves the ERP task and cannot be expressed with the established pattern. Keep its terminology, semantic colors, keyboard behavior, confirmations, and RTL layout consistent with the surrounding product.
 - When a change alters a frequently used workflow, make the transition discoverable: preserve the previous task path where feasible, add a concise Persian cue at the point of change, and provide a limited, reversible transition or an equivalent familiar route when the change is substantial.
 - Familiarity does not override correctness: do not preserve a legacy pattern when it conflicts with document lifecycle safeguards, permissions, accessibility, data integrity, or an explicit business requirement.
+
+## Product Changelog Discipline
+
+- Treat Changelog / What's New as a user-facing release surface, not as a mirror of Git history.
+- Do not create a Changelog entry for every commit, one-line code change, formatting-only change, refactor, test-only change, dependency update, or internal cleanup.
+- Add or update a release entry only when a coherent, user-visible milestone is complete: a new workflow, a meaningful page/report/dashboard capability, an important bug fix that changes user behavior, a security or data-integrity change, or a deployment/release milestone.
+- Aggregate related small commits into one concise release note. Describe the user impact, affected area, and any action users need to take; keep commit IDs as optional technical metadata, never as the headline.
+- Keep work-in-progress changes out of the published Changelog until they form a coherent release. Use a draft when the product's Changelog workflow supports drafts.
+- For every Accounts/Hesabyar change, explicitly decide whether it is release-worthy before writing a Changelog entry. A source change alone is not sufficient, and a release entry must not be presented as live until the corresponding UI/backend change is deployed and verified.
 
 ## Operational UX Laws
 
